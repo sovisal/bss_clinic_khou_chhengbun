@@ -1,0 +1,2221 @@
+
+table { page-break-inside:auto!important; }
+tr { page-break-inside:avoid!important; page-break-after:auto!important; }
+table thead { display: table-row-group!important; }
+table tfoot { display: table-row-group!important; }
+
+.title,
+.title-month,
+.table-head tr td,
+.table-footer tr td{
+	font-size: 10px !important;
+}
+.table-head td{
+	padding: 0 2px;
+}
+.table-head .head-vattin{
+	padding: 0 3px;
+}
+.table-head .head-rate{
+	border: 2px solid #000;
+	padding: 0 2px;
+}
+.table-footer .director-signature,
+.table-footer .accountant{
+	width: 280px;
+	text-align: center;
+}
+.table-footer .accountant{
+	float: right;
+}
+.table-footer .sign-box{
+	height: 60px;
+}
+
+table.table-excel{
+	border: 1px solid #000;
+}
+table.table-excel thead th,
+table.table-excel tfoot tr > th:first-child{
+		text-align: center;
+}
+table.table-excel th,
+table.table-excel td{
+	vertical-align: center;
+	border: 1px solid #000 !important;
+	font-size: 8px;
+	padding: 6px 4px;
+}
+tr.code > th{
+	padding: 0 !important;
+}
+tr.resizable-columns > th{
+	padding: 0 !important;
+	border: none!important;
+}
+tr.resizable-columns + tr > th{
+	border-top: none !important;
+}
+tr.resizable-columns{
+	border: none !important;
+}
+
+@media print{
+
+	.wrapper{
+		display: none;
+	}
+	#print-area{
+		display: block;
+	}
+
+
+}
+
+.form-pdf{
+	width: 21cm; height: 29.7cm;
+	position: relative;
+	font-size: 13px;
+	/* border: 1px solid #fff; */
+}
+.form-pdf *{
+	line-height: 2em;
+}
+.form-pdf div{
+	position: absolute;
+	z-index: 9;
+}
+.form-pdf img{
+	position: absolute;
+	width: 100%;
+}
+
+/* Form TTR001 */
+#TTR001 .header .address{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#TTR001 .header .month{
+	letter-spacing: 14.8px;
+	left: 9.14cm;
+	top: 5.92cm;
+}
+#TTR001 .header .year{
+	letter-spacing: 14.8px;
+	left: 11.09cm;
+	top: 5.92cm;
+}
+#TTR001 .header .head_vat_tin{
+	letter-spacing: 17.2px;
+	left: 5.36cm;
+	top: 7.55cm;
+}
+#TTR001 .header .vat_tin{
+	letter-spacing: 17.2px;
+	left: 8.2cm;
+	top: 7.55cm;
+}
+#TTR001 .header .name{
+	left: 5.34cm;
+	top: 8.28cm;
+	width: 14.8cm;
+}
+#TTR001 .header .business_objective{
+	left: 5.34cm;
+	top: 8.97cm;
+	width: 14.8cm;
+}
+#TTR001 .header .address{
+	left: 5.34cm;
+	top: 9.69cm;
+	width: 14.8cm;
+}
+#TTR001 .header .no_branch{
+	width: 13px;
+	height: 13px;
+	left: 6.88cm;
+	top: 10.65cm;
+}
+#TTR001 .header .yes_branch{
+	width: 13px;
+	height: 13px;
+	left: 8.46cm;
+	top: 10.65cm;
+}
+#TTR001 .header .total_branch{
+	left: 13.1cm;
+	top: 10.48cm;
+	width: 1.63cm;
+	text-align: center;
+}
+
+#TTR001 .body .page_01_02{
+	left: 9.4cm;
+	top: 13.43cm;
+	width: 2.2cm;
+	text-align: center;
+}
+#TTR001 .body .amount_01{
+	left: 17.1cm;
+	top: 13.08cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTR001 .body .amount_02{
+	left: 17.1cm;
+	top: 13.82cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTR001 .body .page_03{
+	left: 9.4cm;
+	top: 14.95cm;
+	width: 2.2cm;
+	text-align: center;
+}
+#TTR001 .body .amount_03{
+	left: 17.1cm;
+	top: 14.95cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTR001 .body .page_04_05_06_07_08_09{
+	left: 9.4cm;
+	top: 18.34cm;
+	width: 2.2cm;
+	text-align: center;
+}
+#TTR001 .body .amount_04{
+	left: 17.1cm;
+	top: 16.46cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTR001 .body .check_04_01{
+	width: 0.25cm;
+	height: 0.25cm;
+	left: 11.77cm;
+	top: 16.34cm;
+}
+#TTR001 .body .amount_04_01{
+	left: 14.45cm;
+	top: 16.1cm;
+	width: 2.18cm;
+	text-align: right;
+}
+#TTR001 .body .check_04_02{
+	width: 0.25cm;
+	height: 0.25cm;
+	left: 11.77cm;
+	top: 17.05cm;
+}
+#TTR001 .body .amount_04_02{
+	left: 14.45cm;
+	top: 16.85cm;
+	width: 2.18cm;
+	text-align: right;
+}
+#TTR001 .body .amount_05{
+	left: 17.1cm;
+	top: 17.6cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTR001 .body .check_05_01{
+	width: 0.25cm;
+	height: 0.25cm;
+	left: 11.77cm;
+	top: 17.86cm;
+}
+#TTR001 .body .amount_05_01{
+	left: 14.45cm;
+	top: 17.6cm;
+	width: 2.18cm;
+	text-align: right;
+}
+#TTR001 .body .amount_06{
+	left: 17.1cm;
+	top: 18.34cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTR001 .body .amount_07{
+	left: 17.1cm;
+	top: 19.08cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTR001 .body .amount_08{
+	left: 17.1cm;
+	top: 19.82cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTR001 .body .amount_09{
+	left: 17.1cm;
+	top: 20.56cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTR001 .body .total_page{
+	left: 9.4cm;
+	top: 21.37cm;
+	width: 2.2cm;
+	text-align: center;
+}
+#TTR001 .body .total_amount{
+	left: 17.1cm;
+	top: 21.37cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTR001 .footer .location{
+	text-align: center;
+	left: 11.86cm;
+	top: 22.35cm;
+	width: 2.5cm;
+}
+#TTR001 .footer .date{
+	left: 14.74cm;
+	top: 22.35cm;
+	letter-spacing: 14.8px;
+	
+}
+#TTR001 .footer .month{
+	left: 16.11cm;
+	top: 22.35cm;
+	letter-spacing: 14.8px;
+}
+#TTR001 .footer .year{
+	left: 17.48cm;
+	top: 22.35cm;
+	letter-spacing: 14.8px;
+}
+#TTR001 .footer .angecy_license_number{
+	left: 11.03cm;
+	top: 28.04cm;
+	letter-spacing: 14.88px;
+}
+
+#TTR001-back .amount_01{
+	left: 12.85cm;
+	top: 2.85cm;
+	width: 6.88cm;
+	text-align: right;
+}
+#TTR001-back .amount_02{
+	left: 12.85cm;
+	top: 3.61cm;
+	width: 6.88cm;
+	text-align: right;
+}
+#TTR001-back .amount_03{
+	left: 12.85cm;
+	top: 4.42cm;
+	width: 6.88cm;
+	text-align: right;
+}
+#TTR001-back .amount_04{
+	left: 12.85cm;
+	top: 5.19cm;
+	width: 6.88cm;
+	text-align: right;
+}
+#TTR001-back .credit_carried_barcode{
+	left: 7.1cm;
+	top: 7.15cm;
+	width: 4.75cm;
+	text-align: center;
+}
+#TTR001-back .amount_05{
+	left: 12.85cm;
+	top: 7.15cm;
+	width: 6.88cm;
+	text-align: right;
+}
+#TTR001-back .amount_06{
+	left: 12.85cm;
+	top: 7.84cm;
+	width: 6.88cm;
+	text-align: right;
+}
+#TTR001-back .amount_07{
+	left: 12.85cm;
+	top: 8.57cm;
+	width: 6.88cm;
+	text-align: right;
+}
+#TTR001-back .amount_08{
+	left: 12.85cm;
+	top: 9.32cm;
+	width: 6.88cm;
+	text-align: right;
+}
+#TTR001-back .amount_09{
+	left: 12.85cm;
+	top: 10.08cm;
+	width: 6.88cm;
+	text-align: right;
+}
+#TTR001-back .amount_10{
+	left: 12.85cm;
+	top: 10.85cm;
+	width: 6.88cm;
+	text-align: right;
+}
+
+
+/* Form TTRH001 */
+#TTRH001 .header .month{
+	letter-spacing: 14.8px;
+	left: 9.17cm;
+	top: 6.06cm;
+}
+#TTRH001 .header .year{
+	letter-spacing: 14.8px;
+	left: 11.08cm;
+	top: 6.06cm;
+}
+#TTRH001 .header .head_vat_tin{
+	letter-spacing: 17.2px;
+	left: 5.36cm;
+	top: 7.85cm;
+}
+#TTRH001 .header .vat_tin{
+	letter-spacing: 17.2px;
+	left: 8.2cm;
+	top: 7.85cm;
+}
+#TTRH001 .header .name{
+	left: 5.34cm;
+	top: 8.6cm;
+	width: 14.8cm;
+}
+#TTRH001 .header .business_objective{
+	left: 5.34cm;
+	top: 9.28cm;
+	width: 14.8cm;
+}
+#TTRH001 .header .address{
+	left: 5.34cm;
+	top: 9.99cm;
+	width: 14.8cm;
+}
+
+#TTRH001 .body .page_01_02{
+	left: 10.02cm;
+	top: 14.81cm;
+	width: 0.61cm;
+	text-align: center;
+}
+#TTRH001 .body .amount_01{
+	left: 16.93cm;
+	top: 14.45cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTRH001 .body .amount_02{
+	left: 16.93cm;
+	top: 15.2cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTRH001 .body .page_03{
+	left: 10.02cm;
+	top: 16.31cm;
+	width: 0.61cm;
+	text-align: center;
+}
+#TTRH001 .body .amount_03{
+	left: 16.93cm;
+	top: 16.33cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTRH001 .body .page_04_05_06_07_08_09{
+	left: 10.02cm;
+	top: 19.35cm;
+	width: 0.61cm;
+	text-align: center;
+}
+#TTRH001 .body .amount_04_01{
+	left: 14.28cm;
+	top: 17.48cm;
+	width: 2.18cm;
+	text-align: right;
+}
+#TTRH001 .body .amount_04{
+	left: 16.93cm;
+	top: 17.48cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTRH001 .body .amount_05{
+	left: 16.93cm;
+	top: 18.27cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTRH001 .body .amount_06{
+	left: 16.93cm;
+	top: 19.02cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTRH001 .body .amount_07{
+	left: 16.93cm;
+	top: 19.75cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTRH001 .body .amount_08{
+	left: 16.93cm;
+	top: 20.52cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTRH001 .body .amount_09{
+	left: 16.93cm;
+	top: 21.27cm;
+	width: 2.9cm;
+	text-align: right;
+}
+#TTRH001 .body .total_page{
+	left: 10.02cm;
+	top: 22.05cm;
+	width: 0.61cm;
+	text-align: center;
+}
+#TTRH001 .body .total_amount{
+	left: 16.93cm;
+	top: 22.05cm;
+	width: 2.9cm;
+	text-align: right;
+}
+
+/* Form T7-01-Head-Office */
+#T7-01-Head-Office .header .month{
+	letter-spacing: 14.8px;
+	left: 8.99cm;
+	top: 8.8cm;
+}
+#T7-01-Head-Office .header .year{
+	letter-spacing: 14.8px;
+	left: 11.12cm;
+	top: 8.8cm;
+}
+#T7-01-Head-Office .header .head_vat_tin{
+	letter-spacing: 17.2px;
+	left: 7.14cm;
+	top: 10.37cm;
+}
+#T7-01-Head-Office .header .vat_tin{
+	letter-spacing: 17.2px;
+	left: 10.16cm;
+	top: 10.37cm;
+}
+
+#T7-01-Head-Office .body .amount_01_01{
+	left: 10.52cm;
+	top: 13.02cm;
+	width: 3.75cm;
+	text-align: right;
+}
+#T7-01-Head-Office .body .amount_01{
+	left: 14.72cm;
+	top: 13.02cm;
+	width: 5.23cm;
+	text-align: right;
+}
+#T7-01-Head-Office .body .check_02_01{
+	width: 0.19cm;
+	height: 0.19cm;
+	left: 7.07cm;
+	top: 13.935cm;
+}
+#T7-01-Head-Office .body .amount_02_01{
+	left: 10.52cm;
+	top: 13.67cm;
+	width: 3.75cm;
+	text-align: right;
+}
+#T7-01-Head-Office .body .check_02_02{
+	width: 0.19cm;
+	height: 0.19cm;
+	left: 7.07cm;
+	top: 14.59cm;
+}
+#T7-01-Head-Office .body .amount_02_02{
+	left: 10.52cm;
+	top: 14.32cm;
+	width: 3.75cm;
+	text-align: right;
+}
+#T7-01-Head-Office .body .check_03{
+	width: 0.19cm;
+	height: 0.19cm;
+	left: 7.07cm;
+	top: 15.24cm;
+}
+#T7-01-Head-Office .body .amount_03_01{
+	left: 10.52cm;
+	top: 14.96cm;
+	width: 3.75cm;
+	text-align: right;
+}
+#T7-01-Head-Office .body .amount_03{
+	left: 14.72cm;
+	top: 14.95cm;
+	width: 5.23cm;
+	text-align: right;
+}
+#T7-01-Head-Office .body .amount_04{
+	left: 14.72cm;
+	top: 15.61cm;
+	width: 5.23cm;
+	text-align: right;
+}
+#T7-01-Head-Office .body .amount_05{
+	left: 14.72cm;
+	top: 16.27cm;
+	width: 5.23cm;
+	text-align: right;
+}
+#T7-01-Head-Office .body .amount_06{
+	left: 14.72cm;
+	top: 16.91cm;
+	width: 5.23cm;
+	text-align: right;
+}
+#T7-01-Head-Office .body .amount_07{
+	left: 14.72cm;
+	top: 17.57cm;
+	width: 5.23cm;
+	text-align: right;
+}
+
+#T7-01-Head-Office .footer .amount_01{
+	left: 14.72cm;
+	top: 21.06cm;
+	width: 5.23cm;
+	text-align: right;
+}
+#T7-01-Head-Office .footer .amount_02{
+	left: 14.72cm;
+	top: 21.72cm;
+	width: 5.23cm;
+	text-align: right;
+}
+#T7-01-Head-Office .footer .ppi_to_be_paid{
+	left: 15.32cm;
+	top: 22.57cm;
+	width: 4.64cm;
+	text-align: right;
+}
+#T7-01-Head-Office .footer .credit_forward{
+	left: 15.32cm;
+	top: 23.33cm;
+	width: 4.64cm;
+	text-align: right;
+}
+
+#T7-01-Head-Office-back .header .amount_03{
+	left: 9.96cm;
+	top: 3.56cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_04{
+	left: 15.85cm;
+	top: 3.56cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_05{
+	left: 9.96cm;
+	top: 4.21cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_06{
+	left: 15.85cm;
+	top: 4.20cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_07{
+	left: 9.96cm;
+	top: 4.86cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_08{
+	left: 9.96cm;
+	top: 5.51cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_09{
+	left: 9.96cm;
+	top: 6.16cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_10{
+	left: 9.96cm;
+	top: 6.81cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_11{
+	left: 15.85cm;
+	top: 7.46cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_12{
+	left: 9.96cm;
+	top: 9.4cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_13{
+	left: 15.85cm;
+	top: 9.4cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_14{
+	left: 9.96cm;
+	top: 10.02cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_15{
+	left: 15.85cm;
+	top: 10.02cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_16{
+	left: 9.96cm;
+	top: 10.68cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_17{
+	left: 9.96cm;
+	top: 11.33cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_18{
+	left: 9.96cm;
+	top: 11.99cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .amount_19{
+	left: 15.85cm;
+	top: 12.63cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .vat_to_be_paid{
+	left: 15.85cm;
+	top: 13.52cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .header .credit_forward{
+	left: 15.85cm;
+	top: 14.32cm;
+	width: 4.11cm;
+	text-align: right;
+}
+
+#T7-01-Head-Office-back .footer .amount_20{
+	left: 9.96cm;
+	top: 18.3cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .footer .amount_21{
+	left: 15.85cm;
+	top: 18.3cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .footer .amount_22{
+	left: 9.96cm;
+	top: 18.95cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .footer .amount_23{
+	left: 15.85cm;
+	top: 18.95cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .footer .amount_24{
+	left: 15.85cm;
+	top: 19.61cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .footer .amount_25{
+	left: 9.96cm;
+	top: 21.79cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .footer .amount_26{
+	left: 15.85cm;
+	top: 21.79cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .footer .amount_27{
+	left: 9.96cm;
+	top: 22.44cm;
+	width: 4.97cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .footer .amount_28{
+	left: 15.85cm;
+	top: 22.44cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .footer .amount_29{
+	left: 15.85cm;
+	top: 23.09cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .footer .vat_state_charge{
+	left: 15.85cm;
+	top: 23.97cm;
+	width: 4.11cm;
+	text-align: right;
+}
+#T7-01-Head-Office-back .footer .credit_forward{
+	left: 15.85cm;
+	top: 24.78cm;
+	width: 4.11cm;
+	text-align: right;
+}
+
+
+/* Form TOS-01-Head-Office */
+#TOS-01-Head-Office .header .month{
+	letter-spacing: 14.8px;
+	left: 9.12cm;
+	top: 6.12cm;
+}
+#TOS-01-Head-Office .header .year{
+	letter-spacing: 14.8px;
+	left: 11.19cm;
+	top: 6.12cm;
+}
+#TOS-01-Head-Office .header .head_vat_tin{
+	letter-spacing: 21px;
+	left: 5.14cm;
+	top: 8.08cm;
+}
+#TOS-01-Head-Office .header .vat_tin{
+	letter-spacing: 21px;
+	left: 8.75cm;
+	top: 8.08cm;
+}
+#TOS-01-Head-Office .body .total_tos_01{
+	left: 9.1cm;
+	top: 10.67cm;
+	width: 10.82cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .total_tax_on_fringe_benefit_02{
+	left: 9.1cm;
+	top: 11.44cm;
+	width: 10.82cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .resident_employee .no_employee_01{
+	left: 1.4cm;
+	top: 13.86cm;
+	width: 2.47cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .salary_01{
+	left: 3.95cm;
+	top: 13.86cm;
+	width: 3.88cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .resident_employee .spouse_01{
+	left: 8.24cm;
+	top: 13.86cm;
+	width: 2.16cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .child_01{
+	left: 10.48cm;
+	top: 13.86cm;
+	width: 3.64cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .tos_01{
+	left: 16.5cm;
+	top: 13.86cm;
+	width: 3.56cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .resident_employee .no_employee_02{
+	left: 1.4cm;
+	top: 14.6cm;
+	width: 2.47cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .salary_02{
+	left: 3.95cm;
+	top: 14.6cm;
+	width: 3.88cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .resident_employee .spouse_02{
+	left: 8.24cm;
+	top: 14.6cm;
+	width: 2.16cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .child_02{
+	left: 10.48cm;
+	top: 14.6cm;
+	width: 3.64cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .tos_02{
+	left: 16.5cm;
+	top: 14.6cm;
+	width: 3.56cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .resident_employee .no_employee_03{
+	left: 1.4cm;
+	top: 15.35cm;
+	width: 2.47cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .salary_03{
+	left: 3.95cm;
+	top: 15.35cm;
+	width: 3.88cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .resident_employee .spouse_03{
+	left: 8.24cm;
+	top: 15.35cm;
+	width: 2.16cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .child_03{
+	left: 10.48cm;
+	top: 15.35cm;
+	width: 3.64cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .tos_03{
+	left: 16.5cm;
+	top: 15.35cm;
+	width: 3.56cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .resident_employee .no_employee_04{
+	left: 1.4cm;
+	top: 16.1cm;
+	width: 2.47cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .salary_04{
+	left: 3.95cm;
+	top: 16.1cm;
+	width: 3.88cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .resident_employee .spouse_04{
+	left: 8.24cm;
+	top: 16.1cm;
+	width: 2.16cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .child_04{
+	left: 10.48cm;
+	top: 16.1cm;
+	width: 3.64cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .tos_04{
+	left: 16.5cm;
+	top: 16.1cm;
+	width: 3.56cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .resident_employee .no_employee_05{
+	left: 1.4cm;
+	top: 16.86cm;
+	width: 2.47cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .salary_05{
+	left: 3.95cm;
+	top: 16.86cm;
+	width: 3.88cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .resident_employee .spouse_05{
+	left: 8.24cm;
+	top: 16.86cm;
+	width: 2.16cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .child_05{
+	left: 10.48cm;
+	top: 16.86cm;
+	width: 3.64cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .tos_05{
+	left: 16.5cm;
+	top: 16.86cm;
+	width: 3.56cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .resident_employee .no_employee_total{
+	left: 1.4cm;
+	top: 17.62cm;
+	width: 2.47cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .salary_total{
+	left: 3.95cm;
+	top: 17.62cm;
+	width: 3.88cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .resident_employee .spouse_total{
+	left: 8.24cm;
+	top: 17.62cm;
+	width: 2.16cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .child_total{
+	left: 10.48cm;
+	top: 17.62cm;
+	width: 3.64cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .resident_employee .tos_total{
+	left: 16.5cm;
+	top: 17.62cm;
+	width: 3.56cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .non_president_employee .no_employee_01{
+	left: 1.4cm;
+	top: 20.57cm;
+	width: 2.47cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .non_president_employee .salary_01{
+	left: 3.95cm;
+	top: 20.57cm;
+	width: 7.8cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .non_president_employee .tos_01{
+	left: 14.45cm;
+	top: 20.57cm;
+	width: 5.6cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .fringe_benefit .no_employee_01{
+	left: 1.4cm;
+	top: 23.55cm;
+	width: 2.47cm;
+	text-align: center;
+}
+#TOS-01-Head-Office .body .fringe_benefit .salary_01{
+	left: 3.95cm;
+	top: 23.55cm;
+	width: 7.8cm;
+	text-align: right;
+}
+#TOS-01-Head-Office .body .fringe_benefit .tos_01{
+	left: 14.45cm;
+	top: 23.55cm;
+	width: 5.6cm;
+	text-align: right;
+}
+
+
+/* Form WT-003-Head-Office */
+#WT-003-Head-Office .header .month{
+	letter-spacing: 14.8px;
+	left: 9.14cm;
+	top: 6.1cm;
+}
+#WT-003-Head-Office .header .year{
+	letter-spacing: 14.8px;
+	left: 11.11cm;
+	top: 6.1cm;
+}
+#WT-003-Head-Office .header .head_vat_tin{
+	letter-spacing: 17.8px;
+	left: 7.16cm;
+	top: 7.73cm;
+}
+#WT-003-Head-Office .header .vat_tin{
+	letter-spacing: 17.8px;
+	left: 10.25cm;
+	top: 7.73cm;
+}
+#WT-003-Head-Office .header .total_wt_tax{
+	letter-spacing: 16.46px;
+	left: 3.99cm;
+	top: 8.57cm;
+	width: 16.6cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_01{
+	left: 10.63cm;
+	top: 11.17cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_wt_tax_01{
+	left: 16.53cm;
+	top: 11.17cm;
+	width: 3.72cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_02{
+	left: 10.63cm;
+	top: 11.81cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_wt_tax_02{
+	left: 16.53cm;
+	top: 11.81cm;
+	width: 3.72cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_03{
+	left: 10.63cm;
+	top: 12.51cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_wt_tax_03{
+	left: 16.53cm;
+	top: 12.51cm;
+	width: 3.72cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_04{
+	left: 10.63cm;
+	top: 13.18cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_wt_tax_04{
+	left: 16.53cm;
+	top: 13.18cm;
+	width: 3.72cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_05{
+	left: 10.63cm;
+	top: 13.84cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_wt_tax_05{
+	left: 16.53cm;
+	top: 13.84cm;
+	width: 3.72cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_06{
+	left: 10.63cm;
+	top: 14.53cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_wt_tax_06{
+	left: 16.53cm;
+	top: 14.53cm;
+	width: 3.72cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_total{
+	left: 10.63cm;
+	top: 15.26cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .resident_type .amount_wt_tax_total{
+	left: 16.53cm;
+	top: 15.26cm;
+	width: 3.72cm;
+	text-align: right;
+}
+
+#WT-003-Head-Office .body .non_resident_type .amount_01{
+	left: 10.63cm;
+	top: 17.24cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .non_resident_type .amount_wt_tax_01{
+	left: 16.53cm;
+	top: 17.24cm;
+	width: 3.72cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .non_resident_type .amount_02{
+	left: 10.63cm;
+	top: 17.94cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .non_resident_type .amount_wt_tax_02{
+	left: 16.53cm;
+	top: 17.94cm;
+	width: 3.72cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .non_resident_type .amount_03{
+	left: 10.63cm;
+	top: 18.61cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .non_resident_type .amount_wt_tax_03{
+	left: 16.53cm;
+	top: 18.61cm;
+	width: 3.72cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .non_resident_type .amount_04{
+	left: 10.63cm;
+	top: 19.27cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .non_resident_type .amount_wt_tax_04{
+	left: 16.53cm;
+	top: 19.27cm;
+	width: 3.72cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .non_resident_type .amount_05{
+	left: 10.63cm;
+	top: 19.96cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .non_resident_type .amount_wt_tax_05{
+	left: 16.53cm;
+	top: 19.96cm;
+	width: 3.72cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .non_resident_type .amount_total{
+	left: 10.63cm;
+	top: 20.73cm;
+	width: 4.15cm;
+	text-align: right;
+}
+#WT-003-Head-Office .body .non_resident_type .amount_wt_tax_total{
+	left: 16.53cm;
+	top: 20.73cm;
+	width: 3.72cm;
+	text-align: right;
+}
+
+/* Branch Section */
+
+/* Form TTRB001 */
+.TTRB001 .header .branch_no{
+	left: 13.55cm;
+	top: 4.67cm;
+	width: 1.72cm;
+	text-align: center;
+}
+.TTRB001 .header .branch_total{
+	left: 15.95cm;
+	top: 4.67cm;
+	width: 2.32cm;
+	text-align: center;
+}
+.TTRB001 .header .month{
+	letter-spacing: 14.8px;
+	left: 9.14cm;
+	top: 6.06cm;
+}
+.TTRB001 .header .year{
+	letter-spacing: 14.8px;
+	left: 11.06cm;
+	top: 6.06cm;
+}
+.TTRB001 .header .head_vat_tin{
+	letter-spacing: 17.2px;
+	left: 5.53cm;
+	top: 7.83cm;
+}
+.TTRB001 .header .vat_tin{
+	letter-spacing: 17.2px;
+	left: 8.54cm;
+	top: 7.83cm;
+}
+.TTRB001 .header .head_barcode_branch{
+	letter-spacing: 17.2px;
+	left: 5.53cm;
+	top: 8.67cm;
+}
+.TTRB001 .header .barcode_branch{
+	letter-spacing: 17.3px;
+	left: 8.54cm;
+	top: 8.67cm;
+}
+.TTRB001 .header .name{
+	left: 5.5cm;
+	top: 9.49cm;
+	width: 14.8cm;
+}
+.TTRB001 .header .business_objective{
+	left: 5.5cm;
+	top: 10.16cm;
+	width: 14.8cm;
+}
+.TTRB001 .header .address{
+	left: 5.5cm;
+	top: 10.89cm;
+	width: 14.8cm;
+}
+
+.TTRB001 .body .page_01_02{
+	left: 10.22cm;
+	top: 16.14cm;
+	width: 0.61cm;
+	text-align: center;
+}
+.TTRB001 .body .amount_01{
+	left: 17.15cm;
+	top: 15.77cm;
+	width: 2.9cm;
+	text-align: right;
+}
+.TTRB001 .body .amount_02{
+	left: 17.15cm;
+	top: 16.51cm;
+	width: 2.9cm;
+	text-align: right;
+}
+.TTRB001 .body .page_03{
+	left: 10.22cm;
+	top: 17.65cm;
+	width: 0.61cm;
+	text-align: center;
+}
+.TTRB001 .body .amount_03{
+	left: 17.15cm;
+	top: 17.65cm;
+	width: 2.9cm;
+	text-align: right;
+}
+.TTRB001 .body .page_04_05_06_07_08_09{
+	left: 10.22cm;
+	top: 20.68cm;
+	width: 0.61cm;
+	text-align: center;
+}
+.TTRB001 .body .amount_04_01{
+	left: 14.48cm;
+	top: 18.82cm;
+	width: 2.2cm;
+	text-align: right;
+}
+.TTRB001 .body .amount_04{
+	left: 17.15cm;
+	top: 18.82cm;
+	width: 2.9cm;
+	text-align: right;
+}
+.TTRB001 .body .amount_05{
+	left: 17.15cm;
+	top: 19.59cm;
+	width: 2.9cm;
+	text-align: right;
+}
+.TTRB001 .body .amount_06{
+	left: 17.15cm;
+	top: 20.34cm;
+	width: 2.9cm;
+	text-align: right;
+}
+.TTRB001 .body .amount_07{
+	left: 17.15cm;
+	top: 21.1cm;
+	width: 2.9cm;
+	text-align: right;
+}
+.TTRB001 .body .amount_08{
+	left: 17.15cm;
+	top: 21.83cm;
+	width: 2.9cm;
+	text-align: right;
+}
+.TTRB001 .body .amount_09{
+	left: 17.15cm;
+	top: 22.59cm;
+	width: 2.9cm;
+	text-align: right;
+}
+.TTRB001 .body .total_page{
+	left: 10.22cm;
+	top: 23.38cm;
+	width: 0.61cm;
+	text-align: center;
+}
+.TTRB001 .body .total_amount{
+	left: 17.15cm;
+	top: 23.38cm;
+	width: 2.9cm;
+	text-align: right;
+}
+
+
+/* Form T7-01-Branch */
+.T7-01-Branch .header .month{
+	letter-spacing: 14.8px;
+	left: 9.12cm;
+	top: 8.9cm;
+}
+.T7-01-Branch .header .year{
+	letter-spacing: 14.8px;
+	left: 11.2cm;
+	top: 8.9cm;
+}
+.T7-01-Branch .header .branch_number{
+	left: 15.99cm;
+	top: 8.9cm;
+	width: 1.77cm;
+	text-align: center;
+}
+.T7-01-Branch .header .branch_total{
+	left: 18.43cm;
+	top: 8.9cm;
+	width: 2.3cm;
+	text-align: center;
+}
+.T7-01-Branch .header .head_vat_tin{
+	letter-spacing: 17.2px;
+	left: 5.29cm;
+	top: 10.67cm;
+}
+.T7-01-Branch .header .vat_tin{
+	letter-spacing: 17.2px;
+	left: 8.32cm;
+	top: 10.67cm;
+}
+.T7-01-Branch .header .head_barcode_branch{
+	letter-spacing: 17.2px;
+	left: 5.29cm;
+	top: 11.41cm;
+}
+.T7-01-Branch .header .barcode_branch{
+	letter-spacing: 17.3px;
+	left: 8.32cm;
+	top: 11.41cm;
+}
+
+.T7-01-Branch .body .amount_01_01{
+	left: 10.5cm;
+	top: 14.12cm;
+	width: 3.75cm;
+	text-align: right;
+}
+.T7-01-Branch .body .amount_01{
+	left: 14.67cm;
+	top: 14.12cm;
+	width: 5.23cm;
+	text-align: right;
+}
+.T7-01-Branch .body .check_02_01{
+	width: 0.19cm;
+	height: 0.19cm;
+	left: 7.035cm;
+	top: 15.05cm;
+}
+.T7-01-Branch .body .amount_02_01{
+	left: 10.5cm;
+	top: 14.78cm;
+	width: 3.75cm;
+	text-align: right;
+}
+.T7-01-Branch .body .check_02_02{
+	width: 0.19cm;
+	height: 0.19cm;
+	left: 7.035cm;
+	top: 15.7cm;
+}
+.T7-01-Branch .body .amount_02_02{
+	left: 10.5cm;
+	top: 15.42cm;
+	width: 3.75cm;
+	text-align: right;
+}
+.T7-01-Branch .body .check_03{
+	width: 0.19cm;
+	height: 0.19cm;
+	left: 7.035cm;
+	top: 16.35cm;
+}
+.T7-01-Branch .body .amount_03_01{
+	left: 10.5cm;
+	top: 16.08cm;
+	width: 3.75cm;
+	text-align: right;
+}
+.T7-01-Branch .body .amount_03{
+	left: 14.67cm;
+	top: 16.08cm;
+	width: 5.23cm;
+	text-align: right;
+}
+.T7-01-Branch .body .amount_04{
+	left: 14.67cm;
+	top: 16.72cm;
+	width: 5.23cm;
+	text-align: right;
+}
+.T7-01-Branch .body .amount_05{
+	left: 14.67cm;
+	top: 17.36cm;
+	width: 5.23cm;
+	text-align: right;
+}
+.T7-01-Branch .body .amount_06{
+	left: 14.67cm;
+	top: 18.02cm;
+	width: 5.23cm;
+	text-align: right;
+}
+.T7-01-Branch .body .amount_07{
+	left: 14.67cm;
+	top: 18.68cm;
+	width: 5.23cm;
+	text-align: right;
+}
+
+.T7-01-Branch .footer .amount_01{
+	left: 14.72cm;
+	top: 22.06cm;
+	width: 5.23cm;
+	text-align: right;
+}
+.T7-01-Branch .footer .amount_02{
+	left: 14.72cm;
+	top: 22.72cm;
+	width: 5.23cm;
+	text-align: right;
+}
+.T7-01-Branch .footer .ppi_to_be_paid{
+	left: 15.32cm;
+	top: 23.57cm;
+	width: 4.64cm;
+	text-align: right;
+}
+.T7-01-Branch .footer .credit_forward{
+	left: 15.32cm;
+	top: 24.33cm;
+	width: 4.64cm;
+	text-align: right;
+}
+
+.T7-01-Branch-back .header .amount_03{
+	left: 9.96cm;
+	top: 3.2cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_04{
+	left: 15.85cm;
+	top: 3.2cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_05{
+	left: 9.96cm;
+	top: 3.86cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_06{
+	left: 15.85cm;
+	top: 3.86cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_07{
+	left: 9.96cm;
+	top: 4.51cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_08{
+	left: 9.96cm;
+	top: 5.15cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_09{
+	left: 9.96cm;
+	top: 5.8cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_10{
+	left: 9.96cm;
+	top: 6.46cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_11{
+	left: 15.85cm;
+	top: 7.12cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_12{
+	left: 9.87cm;
+	top: 9.05cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_13{
+	left: 15.77cm;
+	top: 9.05cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_14{
+	left: 9.87cm;
+	top: 9.7cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_15{
+	left: 15.77cm;
+	top: 9.7cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_16{
+	left: 9.87cm;
+	top: 10.35cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_17{
+	left: 9.87cm;
+	top: 10.99cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_18{
+	left: 9.87cm;
+	top: 11.64cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .amount_19{
+	left: 15.77cm;
+	top: 12.29cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .vat_to_be_paid{
+	left: 15.77cm;
+	top: 13.19cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .header .credit_forward{
+	left: 15.77cm;
+	top: 13.99cm;
+	width: 4.11cm;
+	text-align: right;
+}
+
+.T7-01-Branch-back .footer .amount_20{
+	left: 9.88cm;
+	top: 17.96cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .footer .amount_21{
+	left: 15.77cm;
+	top: 17.96cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .footer .amount_22{
+	left: 9.88cm;
+	top: 18.62cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .footer .amount_23{
+	left: 15.77cm;
+	top: 18.62cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .footer .amount_24{
+	left: 15.77cm;
+	top: 19.27cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .footer .amount_25{
+	left: 9.88cm;
+	top: 21.45cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .footer .amount_26{
+	left: 15.77cm;
+	top: 21.45cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .footer .amount_27{
+	left: 9.88cm;
+	top: 22.09cm;
+	width: 4.97cm;
+	text-align: right;
+}
+.T7-01-Branch-back .footer .amount_28{
+	left: 15.77cm;
+	top: 22.09cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .footer .amount_29{
+	left: 15.77cm;
+	top: 22.76cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .footer .vat_state_charge{
+	left: 15.77cm;
+	top: 23.63cm;
+	width: 4.11cm;
+	text-align: right;
+}
+.T7-01-Branch-back .footer .credit_forward{
+	left: 15.77cm;
+	top: 24.43cm;
+	width: 4.11cm;
+	text-align: right;
+}
+
+
+/* Form TOS-01-Branch */
+.TOS-01-Branch img{
+	top: 1px;
+}
+.TOS-01-Branch .header .month{
+	letter-spacing: 14.8px;
+	left: 9.12cm;
+	top: 6.12cm;
+}
+.TOS-01-Branch .header .year{
+	letter-spacing: 14.8px;
+	left: 11.19cm;
+	top: 6.12cm;
+}
+.TOS-01-Branch .header .branch_number{
+	left: 16cm;
+	top: 6.12cm;
+	width: 1.76cm;
+	text-align: center;
+}
+.TOS-01-Branch .header .branch_total{
+	left: 18.43cm;
+	top: 6.12cm;
+	width: 2.3cm;
+	text-align: center;
+}
+.TOS-01-Branch .header .head_vat_tin{
+	letter-spacing: 21px;
+	left: 5.11cm;
+	top: 8.08cm;
+}
+.TOS-01-Branch .header .vat_tin{
+	letter-spacing: 21px;
+	left: 8.74cm;
+	top: 8.08cm;
+}
+.TOS-01-Branch .header .head_barcode_branch{
+	letter-spacing: 21px;
+	left: 5.11cm;
+	top: 8.96cm;
+}
+.TOS-01-Branch .header .barcode_branch{
+	letter-spacing: 21px;
+	left: 8.74cm;
+	top: 8.96cm;
+}
+.TOS-01-Branch .body .total_tos_01{
+	left: 9.12cm;
+	top: 11.75cm;
+	width: 10.82cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .total_tax_on_fringe_benefit_02{
+	left: 9.12cm;
+	top: 12.5cm;
+	width: 10.82cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .resident_employee .no_employee_01{
+	left: 1.4cm;
+	top: 15.23cm;
+	width: 2.47cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .salary_01{
+	left: 3.94cm;
+	top: 15.23cm;
+	width: 3.88cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .resident_employee .spouse_01{
+	left: 8.22cm;
+	top: 15.23cm;
+	width: 2.16cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .child_01{
+	left: 10.45cm;
+	top: 15.23cm;
+	width: 3.64cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .tos_01{
+	left: 16.5cm;
+	top: 15.23cm;
+	width: 3.56cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .resident_employee .no_employee_02{
+	left: 1.4cm;
+	top: 15.98cm;
+	width: 2.47cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .salary_02{
+	left: 3.94cm;
+	top: 15.98cm;
+	width: 3.88cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .resident_employee .spouse_02{
+	left: 8.22cm;
+	top: 15.98cm;
+	width: 2.16cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .child_02{
+	left: 10.45cm;
+	top: 15.98cm;
+	width: 3.64cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .tos_02{
+	left: 16.5cm;
+	top: 15.98cm;
+	width: 3.56cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .resident_employee .no_employee_03{
+	left: 1.4cm;
+	top: 16.73cm;
+	width: 2.47cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .salary_03{
+	left: 3.94cm;
+	top: 16.73cm;
+	width: 3.88cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .resident_employee .spouse_03{
+	left: 8.22cm;
+	top: 16.73cm;
+	width: 2.16cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .child_03{
+	left: 10.45cm;
+	top: 16.73cm;
+	width: 3.64cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .tos_03{
+	left: 16.5cm;
+	top: 16.73cm;
+	width: 3.56cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .resident_employee .no_employee_04{
+	left: 1.4cm;
+	top: 17.47cm;
+	width: 2.47cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .salary_04{
+	left: 3.94cm;
+	top: 17.47cm;
+	width: 3.88cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .resident_employee .spouse_04{
+	left: 8.22cm;
+	top: 17.47cm;
+	width: 2.16cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .child_04{
+	left: 10.45cm;
+	top: 17.47cm;
+	width: 3.64cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .tos_04{
+	left: 16.5cm;
+	top: 17.47cm;
+	width: 3.56cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .resident_employee .no_employee_05{
+	left: 1.4cm;
+	top: 18.21cm;
+	width: 2.47cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .salary_05{
+	left: 3.94cm;
+	top: 18.21cm;
+	width: 3.88cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .resident_employee .spouse_05{
+	left: 8.22cm;
+	top: 18.21cm;
+	width: 2.16cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .child_05{
+	left: 10.45cm;
+	top: 18.21cm;
+	width: 3.64cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .tos_05{
+	left: 16.5cm;
+	top: 18.21cm;
+	width: 3.56cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .resident_employee .no_employee_total{
+	left: 1.4cm;
+	top: 18.97cm;
+	width: 2.47cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .salary_total{
+	left: 3.94cm;
+	top: 18.97cm;
+	width: 3.88cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .resident_employee .spouse_total{
+	left: 8.22cm;
+	top: 18.97cm;
+	width: 2.16cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .child_total{
+	left: 10.45cm;
+	top: 18.97cm;
+	width: 3.64cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .resident_employee .tos_total{
+	left: 16.5cm;
+	top: 18.97cm;
+	width: 3.56cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .non_president_employee .no_employee_01{
+	left: 1.4cm;
+	top: 21.74cm;
+	width: 2.47cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .non_president_employee .salary_01{
+	left: 3.95cm;
+	top: 21.74cm;
+	width: 7.8cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .non_president_employee .tos_01{
+	left: 14.45cm;
+	top: 21.74cm;
+	width: 5.6cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .fringe_benefit .no_employee_01{
+	left: 1.4cm;
+	top: 24.53cm;
+	width: 2.47cm;
+	text-align: center;
+}
+.TOS-01-Branch .body .fringe_benefit .salary_01{
+	left: 3.95cm;
+	top: 24.53cm;
+	width: 7.8cm;
+	text-align: right;
+}
+.TOS-01-Branch .body .fringe_benefit .tos_01{
+	left: 14.45cm;
+	top: 24.53cm;
+	width: 5.6cm;
+	text-align: right;
+}
+
+				
+/* Form WT-003-Branch */
+.WT-003-Branch .header .month{
+	letter-spacing: 14.8px;
+	left: 9.11cm;
+	top: 6.23cm;
+}
+.WT-003-Branch .header .year{
+	letter-spacing: 14.8px;
+	left: 11.19cm;
+	top: 6.23cm;
+}
+.WT-003-Branch .header .branch_number{
+	left: 16cm;
+	top: 6.21cm;
+	width: 1.76cm;
+	text-align: center;
+}
+.WT-003-Branch .header .branch_total{
+	left: 18.43cm;
+	top: 6.21cm;
+	width: 2.3cm;
+	text-align: center;
+}
+.WT-003-Branch .header .head_vat_tin{
+	letter-spacing: 17.8px;
+	left: 5.96cm;
+	top: 7.9cm;
+}
+.WT-003-Branch .header .vat_tin{
+	letter-spacing: 17.8px;
+	left: 9.06cm;
+	top: 7.9cm;
+}
+.WT-003-Branch .header .head_barcode_branch{
+	letter-spacing: 17.8px;
+	left: 5.96cm;
+	top: 8.65cm;
+}
+.WT-003-Branch .header .barcode_branch{
+	letter-spacing: 17.8px;
+	left: 9.06cm;
+	top: 8.65cm;
+}
+.WT-003-Branch .header .total_wt_tax{
+	letter-spacing: 16.46px;
+	left: 3.99cm;
+	top: 9.41cm;
+	width: 16.6cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_01{
+	left: 10.63cm;
+	top: 12.07cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_wt_tax_01{
+	left: 16.53cm;
+	top: 12.07cm;
+	width: 3.72cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_02{
+	left: 10.63cm;
+	top: 12.75cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_wt_tax_02{
+	left: 16.53cm;
+	top: 12.75cm;
+	width: 3.72cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_03{
+	left: 10.63cm;
+	top: 13.43cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_wt_tax_03{
+	left: 16.53cm;
+	top: 13.43cm;
+	width: 3.72cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_04{
+	left: 10.63cm;
+	top: 14.1cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_wt_tax_04{
+	left: 16.53cm;
+	top: 14.1cm;
+	width: 3.72cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_05{
+	left: 10.63cm;
+	top: 14.77cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_wt_tax_05{
+	left: 16.53cm;
+	top: 14.77cm;
+	width: 3.72cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_06{
+	left: 10.63cm;
+	top: 15.45cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_wt_tax_06{
+	left: 16.53cm;
+	top: 15.45cm;
+	width: 3.72cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_total{
+	left: 10.63cm;
+	top: 16.2cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .resident_type .amount_wt_tax_total{
+	left: 16.53cm;
+	top: 16.2cm;
+	width: 3.72cm;
+	text-align: right;
+}
+
+.WT-003-Branch .body .non_resident_type .amount_01{
+	left: 10.63cm;
+	top: 18.28cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .non_resident_type .amount_wt_tax_01{
+	left: 16.53cm;
+	top: 18.28cm;
+	width: 3.72cm;
+	text-align: right;
+}
+.WT-003-Branch .body .non_resident_type .amount_02{
+	left: 10.63cm;
+	top: 18.95cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .non_resident_type .amount_wt_tax_02{
+	left: 16.53cm;
+	top: 18.95cm;
+	width: 3.72cm;
+	text-align: right;
+}
+.WT-003-Branch .body .non_resident_type .amount_03{
+	left: 10.63cm;
+	top: 19.62cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .non_resident_type .amount_wt_tax_03{
+	left: 16.53cm;
+	top: 19.62cm;
+	width: 3.72cm;
+	text-align: right;
+}
+.WT-003-Branch .body .non_resident_type .amount_04{
+	left: 10.63cm;
+	top: 20.3cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .non_resident_type .amount_wt_tax_04{
+	left: 16.53cm;
+	top: 20.3cm;
+	width: 3.72cm;
+	text-align: right;
+}
+.WT-003-Branch .body .non_resident_type .amount_05{
+	left: 10.63cm;
+	top: 20.98cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .non_resident_type .amount_wt_tax_05{
+	left: 16.53cm;
+	top: 20.98cm;
+	width: 3.72cm;
+	text-align: right;
+}
+.WT-003-Branch .body .non_resident_type .amount_total{
+	left: 10.63cm;
+	top: 21.75cm;
+	width: 4.15cm;
+	text-align: right;
+}
+.WT-003-Branch .body .non_resident_type .amount_wt_tax_total{
+	left: 16.53cm;
+	top: 21.75cm;
+	width: 3.72cm;
+	text-align: right;
+}

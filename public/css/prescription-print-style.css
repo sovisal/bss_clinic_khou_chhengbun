@@ -1,0 +1,121 @@
+
+.invoice-print *{
+    font-family: 'Courier New','Khmer OS Battambang';
+  }
+  
+  .invoice-print{
+      width: 21cm;
+      height: 29.7cm;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #ededed;
+      padding: 1cm;
+  }
+  .invoice-print .table-information td{
+      padding-bottom: 8px;
+  }
+  .invoice-print .table-detail thead th,
+  .invoice-print .table-detail tfoot th:nth-child(3),
+  .invoice-print .table-detail tfoot th:nth-child(4),
+  .invoice-print .table-detail td{
+      padding: 6px;
+      border: 1px solid #ededed;
+  }
+  
+  .invoice-print .table-detail tfoot th{
+      padding: 6px;
+  }
+  
+  .invoice-print small{
+      font-size: 10px !important;
+  }
+  .sign_box{
+      height: 60px;
+  }
+  
+  .prescription-print *{
+    font-family: 'Courier New','Khmer OS Battambang';
+  }
+  
+  .prescription-print{
+      width: 21cm;
+      height: 29.7cm;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #ededed;
+      padding: 1cm;
+  }
+  .prescription-print .table-information td{
+      padding-bottom: 8px;
+  }
+  .prescription-print .table-detail thead th,
+  .prescription-print .table-detail td{
+      font-size: 13px;
+      padding: 6px;
+      border: 1px solid #ededed;
+  }
+  
+  .prescription-print .table-detail tfoot th{
+      padding: 6px;
+  }
+  
+  .prescription-print small{
+      font-size: 10px !important;
+  }
+  
+  .echoes-print *{
+    /* font-family: 'Courier New','Khmer OS Battambang'; */
+  }
+  
+  .echoes-print{
+      width: 21cm;
+      height: 29.7cm;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #ededed;
+      padding: 1cm;
+  }
+  .echoes-print .table-information td{
+      padding-bottom: 8px;
+  }
+  .echoes-print .table-detail thead th,
+  .echoes-print .table-detail td{
+      font-size: 13px;
+      padding: 6px;
+  }
+  
+  .echoes-print .table-detail tfoot th{
+      padding: 6px;
+  }
+  
+  .echoes-print small{
+      font-size: 10px !important;
+  }
+  
+  @media print {
+      @page {
+          size: A4;
+          margin: 0;
+      }
+  
+      .invoice-print{
+          display: block;
+          margin: 0 !important;
+          box-shadow: none;
+          border: none;
+      }
+      
+      td .color_blue{
+          color: blue !important;
+          -webkit-print-color-adjust: exact !important;
+          -moz-print-color-adjust: exact !important;
+          -o-print-color-adjust: exact !important;
+      }
+      td .color_red{
+          color: red !important;
+          -webkit-print-color-adjust: exact !important;
+          -moz-print-color-adjust: exact !important;
+          -o-print-color-adjust: exact !important;
+      }
+  }
+  
