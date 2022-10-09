@@ -90,7 +90,7 @@ class GlobalComponent extends Controller
 				<table class="table-header" width="100%">
 					<tr>					
 						<td>
-							<img src="/images/setting/print-header.svg" alt="IMG">
+							<img src="/images/setting/print-header.png" alt="IMG">
 						</td>
 					</tr>
 				</table>
