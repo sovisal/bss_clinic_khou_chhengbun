@@ -17,7 +17,7 @@
 .invoice-print .table-detail tfoot th:nth-child(4),
 .invoice-print .table-detail td{
 	padding: 6px;
-	border: 1px solid blue;
+	border: 1px solid #0070C0;
 }
 .invoice-print small{
 	font-size: 10px !important;
@@ -53,7 +53,7 @@
 .prescription-print .table-detail td{
 	font-size: 13px;
 	padding: 6px;
-	border: 1px solid blue;
+	border: 1px solid #0070C0;
 }
 .prescription-print .table-detail tfoot th{
 	padding: 6px;
@@ -96,7 +96,7 @@
 .prescription-print *,
 .labor-print *{
   font-family: 'Arial','Khmer OS Siemreap', 'Wingdings 2';
-	color: blue;
+	color: #0070C0;
 }
 .table-header *{
   font-family: 'Arial Black','Khmer OS Siemreap' !important;
@@ -117,10 +117,10 @@
 .color_green{
 	color: green !important;
 }
-.color_blue{
-	color: blue !important;
+.color_#0070C0{
+	color: #0070C0 !important;
 }
-.color_light_blue{
+.color_light_#0070C0{
 	color: #0070C0 !important;
 }
 
@@ -133,7 +133,7 @@
 /* Blood Test Labor */
 .blood-test *{
 	font-size: 14px;
-	color: blue;
+	color: #0070C0;
 	font-family: 'Times New Roman','Khmer OS Siemreap', 'Wingdings 2';
 }
 
@@ -142,14 +142,14 @@ tr { page-break-inside:avoid!important; page-break-after:auto!important; }
 table thead { display: table-row-group!important; }
 table tfoot { display: table-row-group!important; }
 
-.color_blue{
-	color: blue !important;
+.color_#0070C0{
+	color: #0070C0 !important;
 	-webkit-print-color-adjust: exact !important;
 	-moz-print-color-adjust: exact !important;
 	-o-print-color-adjust: exact !important;
 }
 
-.color_light_blue{
+.color_light_#0070C0{
 	color: #0070C0 !important;
 	-webkit-print-color-adjust: exact !important;
 	-moz-print-color-adjust: exact !important;
@@ -178,7 +178,7 @@ table tfoot { display: table-row-group!important; }
 	.labor-print *,
 	.invoice-print *,
 	.prescription-print *{
-		color: blue !important;
+		color: #0070C0 !important;
 		-webkit-print-color-adjust: exact !important;
 		-moz-print-color-adjust: exact !important;
 		-o-print-color-adjust: exact !important;
@@ -195,14 +195,14 @@ table tfoot { display: table-row-group!important; }
 		border: none;
 	}
 	
-	.color_blue{
-		color: blue !important;
+	.color_#0070C0{
+		color: #0070C0 !important;
 		-webkit-print-color-adjust: exact !important;
 		-moz-print-color-adjust: exact !important;
 		-o-print-color-adjust: exact !important;
 	}
 	
-	.color_light_blue{
+	.color_light_#0070C0{
 		color: #0070C0 !important;
 		-webkit-print-color-adjust: exact !important;
 		-moz-print-color-adjust: exact !important;

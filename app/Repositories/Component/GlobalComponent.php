@@ -71,7 +71,7 @@ class GlobalComponent extends Controller
 						<tr>
 							<td width="40%">
 								<div class="KHOSMoulLight"style="color: red;">'. $this->sign_name_kh .'</div>
-								<div style="color: blue; font-weight: bold; text-transform: uppercase; padding: 5px 0;">'. $this->sign_name_en .'</div>
+								<div style="color: #0070C0; font-weight: bold; text-transform: uppercase; padding: 5px 0;">'. $this->sign_name_en .'</div>
 								<div>'. $this->echo_description .'</div>
 							</td>
 							<td  width="20%">
@@ -89,39 +89,8 @@ class GlobalComponent extends Controller
 			$html_header .= '		
 				<table class="table-header" width="100%">
 					<tr>					
-						<td rowspan="3" width="110px" style="padding: 0 !important;">
-							<img src="/images/setting/logo.png" alt="IMG">
-						</td>
-						<td class="text-center">
-							<div style="font-size: 25px;" class="color_blue KHOSMoulLight">' . $this->clinic_name_kh . '</div>
-						</td>
-						<td rowspan="3" width="110px" style="padding: 0 !important;">
-							<img src="/images/setting/logo.png" alt="IMG">
-						</td>
-					</tr>
-					<tr>
-						<td class="text-center" style="padding: 0;">
-							<div style="font-size: 25px;" class="color_blue KHOSMoulLight">'. $this->clinic_name_en .'</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="text-center">
-							<div style="font-size: 16px;" class="color_green KHOSMoulLight">ពិនិត្យ~ព្យាបាល ជំងឺទូទៅ កុមារ និង មនុស្សចាស់</div>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="3" class="text-center" style="padding: 1px 0;">
-							<div class="color_blue">'. $this->description .'</div>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="3" class="text-center" style="padding: 1px 0;">
-							<div class="color_blue">'. $this->address .'</div>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="3" class="text-center" style="padding-bottom: 5px;">
-							<div class="color_blue">លេខទូរស័ព្ទ: <b>'. $this->phone .'</b></div>
+						<td>
+							<img src="/images/setting/print-header.svg" alt="IMG">
 						</td>
 					</tr>
 				</table>
@@ -189,12 +158,12 @@ class GlobalComponent extends Controller
 	public function FooterComeBackText($text = '', $color = 'color_red')
 	{
 		$html_footer_comeback ="
-													<div class='color_red' style=' text-align: center; position: absolute; bottom: 0.4cm; left: 0; width: 100%; padding: 0 0.8cm;'>
-														<div style=' border-top: 2px solid blue; padding-top: 10px;'>
-															<span class='KHOSMoulLight' style='color: red;'>កំណត់ចំណាំ:</span> " . ($text ?: '<span>សូមយកវេជ្ជបញ្ជាមកវិញពេលមកពិនិត្យលើកក្រោយ</span>') . "
-														</div>
-													</div>
-												";
+								<div class='color_red' style=' text-align: center; position: absolute; bottom: 0.4cm; left: 0; width: 100%; padding: 0 0.8cm;'>
+									<div style='padding-top: 10px; font-weight: bold;'>
+										លេខទូរស័ព្ទៈ ". Auth::user()->setting()->phone ."
+									</div>
+								</div>
+							";
 		return $html_footer_comeback;
 	}
 
