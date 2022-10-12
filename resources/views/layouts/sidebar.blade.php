@@ -91,6 +91,15 @@
 						@endcan
 					@endif
 
+					@can('EyeExamination Index', 'EyeExamination Create', 'EyeExamination Edit', 'EyeExamination Delete')
+					<li class="nav-item">
+						<a href="{{ route('eye_examination.create') }}" class="nav-link {{ ((Auth::user()->sidebarActive() == 'eye_examination' )? 'active':'') }}">
+							<i class="fa fa-eye nav-icon"></i>
+							<p>{{ __('sidebar.eye_examination.main') }}</p>
+						</a>
+					</li>
+					@endcan
+
 					@canany(['Labor Service Index','Labor Service Create', 'Labor Service Edit', 'Labor Service Delete', 'Labor Category Index','Labor Category Create', 'Labor Category Edit', 'Labor Category Delete'])
 				
 					<li class="nav-item has-treeview {{ ((in_array(Auth::user()->sidebarActive(), [ 'labor_service', 'labor_category' ]))? 'menu-open':'') }}">
