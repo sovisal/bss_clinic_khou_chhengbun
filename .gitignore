@@ -4,7 +4,6 @@
 /public/echoes
 /public/users
 /public/vendor
-/public/vendor
 /storage/*.key
 /vendor
 .env
