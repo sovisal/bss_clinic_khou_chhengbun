@@ -14,10 +14,9 @@ use App\Repositories\Component\GlobalComponent;
 class EyeExaminationRepository
 {
 
-
 	public function getDatatable($request)
 	{
-		
+
 		$from = $request->from;
 		$to = $request->to;
 		$eye_examinations = EyeExamination::whereBetween('date', [$from, $to])->orderBy('date', 'asc')->get();
@@ -48,7 +47,7 @@ class EyeExaminationRepository
 		$total_discount_riel = number_format($total_discount*$eye_examination->rate, 0);
 		$grand_total_riel = number_format($grand_total*$eye_examination->rate, 0);
 
-		
+
 		$gtt = explode(".", number_format($grand_total,2));
 		$gtt_dollars = $gtt[0];
 		$gtt_cents = $gtt[1];
@@ -58,12 +57,12 @@ class EyeExaminationRepository
 
 		if(empty($eye_examination->province)){ $eye_examination->province = new \stdClass(); $eye_examination->province->name = ''; }
 		if(empty($eye_examination->district)){ $eye_examination->district = new \stdClass(); $eye_examination->district->name = ''; }
-		
+
 		if ($eye_examination->echo_default_description->slug == 'letter-form-the-hospital') {
 			$eye_examination_detail = '<section class="eye_examination-print" style="position: relative;">
 				' . $GlobalComponent->PrintHeader('echo', $eye_examination) . '
 				<br/>
-				<br/>	
+				<br/>
 				<div class="echo_description">
 					'. $eye_examination->description .'
 				</div>
@@ -107,15 +106,46 @@ class EyeExaminationRepository
 
 	public function create($request, $path)
 	{
+		dd($request);
 		$request->patient_id = GlobalComponent::GetPatientIdOrCreate($request);
 		$eye_examination = EyeExamination::create(GlobalComponent::MergeRequestPatient($request, [
 			'date' => $request->date,
-			'pt_diagnosis' => $request->pt_diagnosis,
-			'description' => $request->description,
+			'initial_iop_re' => $request->initial_iop_re,
+			'initial_iop_le' => $request->initial_iop_le,
+			'primary_diagnosis_re' => $request->primary_diagnosis_re,
+			'primary_diagnosis_le' => $request->primary_diagnosis_le,
+			'initial_iop_re' => $request->initial_iop_re,
+			'initial_iop_le' => $request->initial_iop_le,
+			'primary_diagnosis_re' => $request->primary_diagnosis_re,
+			'primary_diagnosis_le' => $request->primary_diagnosis_le,
+			'ocular_movem_re' => $request->ocular_movem_re,
+			'ocular_movem_le' => $request->ocular_movem_le,
+			'eyelid_las_re' => $request->eyelid_las_re,
+			'eyelid_las_le' => $request->eyelid_las_le,
+			'conjunctiva_re' => $request->conjunctiva_re,
+			'conjunctiva_le' => $request->conjunctiva_le,
+			'cornea_re' => $request->cornea_re,
+			'cornea_le' => $request->cornea_le,
+			'ac_re' => $request->ac_re,
+			'ac_le' => $request->ac_le,
+			'lris_pupil_re' => $request->lris_pupil_re,
+			'lris_pupil_le' => $request->lris_pupil_le,
+			'lens_re' => $request->lens_re,
+			'lens_le' => $request->lens_le,
+			'retinal_reflex_re' => $request->retinal_reflex_re,
+			'retinal_reflex_le' => $request->retinal_reflex_le,
+
+			// 'image_uper_lide_re' => $request->image_uper_lide_re,
+			// 'image_uper_lide_le' => $request->image_uper_lide_le,
+			// 'image_eye_boll_re' => $request->image_eye_boll_re,
+			// 'image_eye_boll_le' => $request->image_eye_boll_le,
+			// 'image_locver_lide_re' => $request->image_locver_lide_re,
+			// 'image_locver_lide_le' => $request->image_locver_lide_le,
+
 			'created_by' => Auth::user()->id,
 			'updated_by' => Auth::user()->id,
 		]));
-		
+
 		if ($request->file('image')) {
 			$image = $request->file('image');
 			$eye_examination_image = time() .'_'. $eye_examination->id .'.png';
@@ -133,7 +163,7 @@ class EyeExaminationRepository
 			'description' => $request->description,
 			'updated_by' => Auth::user()->id,
 		]));
-		
+
 		if ($request->file('image')) {
 			$image = $request->file('image');
 			$eye_examination_image = (($eye_examination->image!='default.png')? $eye_examination->image : time() .'_'. $eye_examination->id .'.png');

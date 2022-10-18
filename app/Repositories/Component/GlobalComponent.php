@@ -8,7 +8,7 @@ use App\Models\FourLevelAddress;
 use Auth;
 
 class GlobalComponent extends Controller
-{	
+{
 	protected $logo;
 	protected $clinic_name_kh;
 	protected $clinic_name_en;
@@ -23,12 +23,12 @@ class GlobalComponent extends Controller
 
 	public function __construct() {
 		$setting_obj =  Auth::user()->setting();
-		
+
 		$this->unique_clinic_name = trim(strtoupper(Auth::user()->roles->first()->name));
 		foreach (['logo', 'clinic_name_kh', 'clinic_name_en', 'description', 'address', 'phone', 'sign_name_kh', 'sign_name_en', 'echo_description', 'echo_address'] as $obj_member) {
 			$this->{$obj_member} = $setting_obj->{$obj_member};
 		}
-		
+
 	}
 
 	public function PrintHeader($module = 'invoice', $object = null)
@@ -41,7 +41,7 @@ class GlobalComponent extends Controller
 				រោគវិនិច្ឆ័យ: <span class="pt_diagnosis">'. ($object->pt_diagnosis ?? '') .'</span>
 			</td>
 		');
-		
+
 		// Top Header
 		if ($module == 'echo') {
 			if ($object->echo_default_description->slug == 'letter-form-the-hospital') {
@@ -86,9 +86,9 @@ class GlobalComponent extends Controller
 				';
 			}
 		} else {
-			$html_header .= '		
+			$html_header .= '
 				<table class="table-header" width="100%">
-					<tr>					
+					<tr>
 						<td>
 							<img src="/images/setting/print-header.png" alt="IMG">
 						</td>
@@ -139,7 +139,7 @@ class GlobalComponent extends Controller
 					: '').'
 			</table>
 		';
-		return $html_header;		
+		return $html_header;
 	}
 
 	public static function DoctorSignature($doctor_name = '', $title_signature = 'គ្រូពេទ្យព្យាបាល')
@@ -168,8 +168,8 @@ class GlobalComponent extends Controller
 	}
 
 	public static function GetPatientIdOrCreate($request)
-	{	
-		$patient_id = 0;	
+	{
+		$patient_id = 0;
 		$patient_name = trim($request->pt_name);
 		if (!empty($patient_name)) {
 			$patient = Patient::where('name', $patient_name)->first();
@@ -190,8 +190,8 @@ class GlobalComponent extends Controller
 				$patient_id = $created_patient->id;
 			}
 		}
-		
-		return $patient_id;		
+
+		return $patient_id;
 	}
 
 	public static function MergeRequestPatient($request, $array)
@@ -215,7 +215,7 @@ class GlobalComponent extends Controller
 }
 
 /*
-	How to use : 
+	How to use :
 		use App\Repositories\Component\GlobalComponent as GComponent;
 		GComponent::FooterComeBackText('សូមយកលទ្ធផលពិនិត្យឈាមនេះមកវិញពេលមកពិនិត្យលើកក្រោយ')
 		GComponent::DoctorSignature()

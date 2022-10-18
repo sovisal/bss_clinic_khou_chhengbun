@@ -49,7 +49,7 @@ return [
 		'district' => 'ស្រុក/ខណ្ឌ',
 		'echo_default_description' => 'លំនាំការពិនិត្យអេកូ',
 		'echoes' => 'ការពិនិត្យអេកូ',
-
+		'eye_examination' => 'ការពិនិត្យភ្នែក',
 	],
 
 	'breadcrumb' => [
@@ -92,20 +92,21 @@ return [
 			'labor_category' => 'ប្រភេទការពិនិត្យឈាម',
 			'labor_service' => 'សេវាកម្មការពិនិត្យឈាម',
 			'setting' => 'ការកណត់',
-	  	'province' => 'ខេត្ត/ក្រុង',
-      'district' => 'ស្រុក/ខណ្ឌ',
+			'province' => 'ខេត្ត/ក្រុង',
+			'district' => 'ស្រុក/ខណ្ឌ',
 			'echo_default_description' => 'លំនាំការពិនិត្យអេកូ',
 			'echoes' => 'ការពិនិត្យអេកូ',
+			'eye_examination' => 'ការពិនិត្យភ្នែក',
 		],
 	],
 
 	'buttons' => [
 		'report' => 'របាយការណ៍',
 		'export' => 'នាំចេញ',
-		'copy' => 'ចម្លង', 
-		'csv' => 'CSV', 
-		'excel' => 'Excel', 
-		'pdf' => 'PDF', 
+		'copy' => 'ចម្លង',
+		'csv' => 'CSV',
+		'excel' => 'Excel',
+		'pdf' => 'PDF',
 		'print' => 'បោះពុម្ភ',
 		'print_all' => 'បោះពុម្ភទាំងអស់',
 		'import' => 'នាំចូល',
@@ -172,6 +173,25 @@ return [
 			'user' => 'អ្នកប្រើប្រាស់',
 		],
 
+		'eye_examination' => [
+			'initial_iop' => 'Initial IOP',
+			'primary_diagnosis' => 'Primary Diagnosis',
+			'ocular_movem' => 'Ocular Movem',
+			'eyelid_las' => 'Eyelid/Las',
+			'conjunctiva' => 'Conjunctiva',
+			'cornea' => 'Cornea',
+			'ac' => 'AC',
+			'lris_pupil' => 'Lris Pupil',
+			'lens' => 'Lens',
+			'retinal_reflex' => 'Retinal Reflex',
+			'plain_eye' => 'Plain eye',
+			'with_ph' => 'With PH',
+			'with_glasses' => 'With Glasses',
+			'image_uper_lide' => 'Uper Lide',
+			'image_eye_boll' => 'Eye Boll',
+			'image_locver_lide' => 'Locver Lide',
+		],
+
 		'invoice' => [
 			'choose_date' => 'ជ្រើសរើសកាលកំណត់',
 			'inv_number' => 'លេខរៀងវិក្កយបត្រ',
@@ -185,7 +205,7 @@ return [
 			'pt_gender' => 'ភេទអ្នកជំងឺ',
 			'pt_address' => 'អាសយដ្ឋានអ្នកជំងឺ',
 			'status' => 'ការបង់ប្រាក់',
-	    	'discount' => 'បញ្ចុះតម្លៃ',
+			'discount' => 'បញ្ចុះតម្លៃ',
 			'item_type' => 'ប្រភេទ',
 			'service' => 'សេវាកម្ម',
 			'name' => 'ឈ្មោះ',
@@ -207,7 +227,7 @@ return [
 			'pt_age' => 'អាយុអ្នកជំងឺ',
 			'pt_gender' => 'ភេទអ្នកជំងឺ',
 			'pt_address' => 'អាសយដ្ឋានអ្នកជំងឺ',
-	    'discount' => 'បញ្ចុះតម្លៃ',
+		'discount' => 'បញ្ចុះតម្លៃ',
 			'service' => 'សេវាកម្ម',
 		],
 
@@ -221,7 +241,7 @@ return [
 			'pt_age' => 'អាយុអ្នកជំងឺ',
 			'pt_gender' => 'ភេទអ្នកជំងឺ',
 			'pt_address' => 'អាសយដ្ឋានអ្នកជំងឺ',
-	    'discount' => 'បញ្ចុះតម្លៃ',
+		'discount' => 'បញ្ចុះតម្លៃ',
 			'medicine' => 'ថ្នាំ',
 			'morning' => 'ព្រឹក',
 			'afternoon' => 'ថ្ងៃ',
@@ -323,7 +343,7 @@ return [
 			'code' => 'កូដ',
 			'province' => 'ស្ថិតក្នុងខេត្ត/ក្រុង',
 		],
-		
+
 		'permission' => [
 			'crud' => 'បង្កើត CRUD',
 		],
