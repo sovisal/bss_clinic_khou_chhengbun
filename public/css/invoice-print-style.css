@@ -23,6 +23,22 @@
 	font-size: 10px !important;
 }
 
+.eye_examination-print {
+
+}
+.eye_examination-print .table-info-1{
+
+}
+.eye_examination-print .table-info-2{
+
+}
+.eye_examination-print .table-info-image{
+
+}
+.eye_examination-print .table-info-3{
+
+}
+
 .labor-print{
 	width: 21cm;
 	height: 32.5cm;
@@ -63,7 +79,7 @@
 }
 .prescription-print .table-detail td{
 	font-size: 15px;
-}	
+}
 
 .echoes-print .echo_description{
   font-family: 'Arial Black','Khmer OS Siemreap';
@@ -194,14 +210,14 @@ table tfoot { display: table-row-group!important; }
 		box-shadow: none;
 		border: none;
 	}
-	
+
 	.color_#0070C0{
 		color: #0070C0 !important;
 		-webkit-print-color-adjust: exact !important;
 		-moz-print-color-adjust: exact !important;
 		-o-print-color-adjust: exact !important;
 	}
-	
+
 	.color_light_#0070C0{
 		color: #0070C0 !important;
 		-webkit-print-color-adjust: exact !important;

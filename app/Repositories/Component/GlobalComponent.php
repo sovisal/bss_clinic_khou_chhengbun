@@ -34,8 +34,8 @@ class GlobalComponent extends Controller
 	public function PrintHeader($module = 'invoice', $object = null)
 	{
 		$html_header = '';
-		$title_module = ($module == 'invoice' ? 'វិក្កយបត្រ' : ($module == 'prescription' ? 'វេជ្ជបញ្ជា' : ($module == 'labor' ? 'ប័ណ្ណវិភាគវេជ្ជសាស្រ្ត' : '_______________')));
-		$number = ($module == 'invoice' ? 'inv_number' : ($module == 'prescription' ? 'code' : ($module == 'labor' ? 'labor_number' : 'number')));
+		$title_module = ($module == 'invoice' ? 'វិក្កយបត្រ' : ($module == 'prescription' ? 'វេជ្ជបញ្ជា' : ($module == 'labor' ? 'ប័ណ្ណវិភាគវេជ្ជសាស្រ្ត' :  ($module == 'eye_examination' ? 'PATIENT CHART' : '_______________'))));
+		$number = ($module == 'invoice' ? 'inv_number' : ($module == 'prescription' ? 'code' : ($module == 'labor' ? 'labor_number' : ($module == 'eye_examination' ? 'id' : 'number'))));
 		$html_diagnosis = $module == 'labor' ? '' : ('
 			<td width="50%" style="">
 				រោគវិនិច្ឆ័យ: <span class="pt_diagnosis">'. ($object->pt_diagnosis ?? '') .'</span>

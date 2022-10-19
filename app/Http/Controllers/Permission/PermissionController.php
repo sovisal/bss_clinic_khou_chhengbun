@@ -55,7 +55,7 @@ class PermissionController extends Controller
 		$this->data = [
 				'permission' => $permission,
 		];
-		
+
 		return view('permission.edit', $this->data);
 	}
 
@@ -78,7 +78,7 @@ class PermissionController extends Controller
 			->with('success', __('alert.crud.success.delete', ['name' => Auth::user()->module()]) . $this->permissions->destroy($id));
 	}
 
-	
+
 	public function permission_to_role()
 	{
 		$this->data = [

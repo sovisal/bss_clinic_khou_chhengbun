@@ -1,8 +1,9 @@
 /node_modules
 /public/hot
 /public/storage
-/public/echoes
-/public/users
+/public/images/echoes
+/public/images/eye_examinations
+/public/images/users
 /public/vendor
 /storage/*.key
 /vendor

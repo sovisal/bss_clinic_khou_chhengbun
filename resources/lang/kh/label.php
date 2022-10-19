@@ -174,6 +174,7 @@ return [
 		],
 
 		'eye_examination' => [
+			'ee_number' => 'Number',
 			'initial_iop' => 'Initial IOP',
 			'primary_diagnosis' => 'Primary Diagnosis',
 			'ocular_movem' => 'Ocular Movem',

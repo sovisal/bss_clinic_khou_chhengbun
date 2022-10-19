@@ -24,36 +24,31 @@ class PermissionRepository
 		$permission = null;
 
 		if ($request->crud == 1) {
-			Permission::create([
+			Permission::firstOrCreate([
 				'name' => $request->name.' Index',
 				'description' => $request->name.' Index',
 			]);
-
-			Permission::create([
+			Permission::firstOrCreate([
 				'name' => $request->name.' Create',
 				'description' => 'Create new '. $request->name,
 			]);
-
-			Permission::create([
+			Permission::firstOrCreate([
 				'name' => $request->name.' Edit',
 				'description' => 'Edit Existed '. $request->name,
 			]);
-
-			$permission = Permission::create([
+			$permission = Permission::firstOrCreate([
 				'name' => $request->name.' Delete',
 				'description' => 'Delete Existed  '. $request->name,
 			]);
-			
 		}else{
-			$permission = Permission::create([
+			$permission = Permission::firstOrCreate([
 				'name' => $request->name,
 				'description' => $request->description,
 			]);
 		}
 
-
 		return $permission;
-	
+
 	}
 
 
@@ -61,7 +56,7 @@ class PermissionRepository
 	{
 
 		return $permission = Permission::find($id);
-		
+
 	}
 
 
