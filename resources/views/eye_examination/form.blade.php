@@ -13,7 +13,7 @@
 				<div class="col-sm-6">
 					<div class="form-group">
 						{!! Html::decode(Form::label('ee_number', __('label.form.eye_examination.ee_number'))) !!}
-						{!! Form::text('ee_number', ((isset($eye_examination->id))? $eye_examination->id : '' ), ['class' => 'form-control'. (($errors->has("ee_number"))? "is-invalid" : ""), 'autocomplete' => 'off', 'disabled' => 'disabled']) !!}
+						{!! Form::text('ee_number', ((isset($eye_examination->id))? str_pad($eye_examination->id, 6, '0', STR_PAD_LEFT) : '' ), ['class' => 'form-control'. (($errors->has("ee_number"))? "is-invalid" : ""), 'autocomplete' => 'off', 'disabled' => 'disabled']) !!}
 					</div>
 				</div>
 			@endif
@@ -69,6 +69,17 @@
 						</tr>
 					</thead>
 					<tbody>
+						<tr>
+							<td class="text-right bg-light-gray">{!! Html::decode(Form::label('orbit_re', __('label.form.eye_examination.orbit'))) !!}</td>
+							<td>
+								{!! Form::text('orbit_re', ((isset($pre_select_obj->orbit_re))? $pre_select_obj->orbit_re : '' ), ['class' => 'form-control '. (($errors->has("orbit_re"))? "is-invalid" : "")]) !!}
+								{!! $errors->first('orbit_re', '<div class="invalid-feedback">:message</div>') !!}
+							</td>
+							<td>
+								{!! Form::text('orbit_le', ((isset($pre_select_obj->orbit_le))? $pre_select_obj->orbit_le : '' ), ['class' => 'form-control '. (($errors->has("orbit_le"))? "is-invalid" : "")]) !!}
+								{!! $errors->first('orbit_le', '<div class="invalid-feedback">:message</div>') !!}
+							</td>
+						</tr>
 						<tr>
 							<td class="text-right bg-light-gray">{!! Html::decode(Form::label('initial_iop_re', __('label.form.eye_examination.initial_iop'))) !!}</td>
 							<td>
@@ -215,7 +226,7 @@
 					<td class="text-center">
 						<div class="fileinput fileinput-new" data-provides="fileinput">
 							<div class="fileinput-new img-thumbnail" style="max-width: 100%;">
-								<img data-src="" src="/images/eye_examinations/{{ ((isset($echoes->image_uper_lide_re))? $echoes->image_uper_lide_re : 'default.png' ) }}" alt="{{ Auth::user()->name }}">
+								<img data-src="" src="/images/eye_examinations/{{ ((isset($eye_examination->image_uper_lide_re))? $eye_examination->image_uper_lide_re : 'default.png' ) }}" alt="...">
 							</div>
 							<div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 248px;"></div>
 							<div class="mt-2">
@@ -231,7 +242,7 @@
 					<td class="text-center">
 						<div class="fileinput fileinput-new" data-provides="fileinput">
 							<div class="fileinput-new img-thumbnail" style="max-width: 100%;">
-								<img data-src="" src="/images/eye_examinations/{{ ((isset($echoes->image_uper_lide_le))? $echoes->image_uper_lide_le : 'default.png' ) }}" alt="{{ Auth::user()->name }}">
+								<img data-src="" src="/images/eye_examinations/{{ ((isset($eye_examination->image_uper_lide_le))? $eye_examination->image_uper_lide_le : 'default.png' ) }}" alt="...">
 							</div>
 							<div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 248px;"></div>
 							<div class="mt-2">
@@ -251,7 +262,7 @@
 					<td class="text-center">
 						<div class="fileinput fileinput-new" data-provides="fileinput">
 							<div class="fileinput-new img-thumbnail" style="max-width: 100%;">
-								<img data-src="" src="/images/eye_examinations/{{ ((isset($echoes->image_eye_boll_re))? $echoes->image_eye_boll_re : 'default.png' ) }}" alt="{{ Auth::user()->name }}">
+								<img data-src="" src="/images/eye_examinations/{{ ((isset($eye_examination->image_eye_boll_re))? $eye_examination->image_eye_boll_re : 'default.png' ) }}" alt="...">
 							</div>
 							<div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 248px;"></div>
 							<div class="mt-2">
@@ -267,7 +278,7 @@
 					<td class="text-center">
 						<div class="fileinput fileinput-new" data-provides="fileinput">
 							<div class="fileinput-new img-thumbnail" style="max-width: 100%;">
-								<img data-src="" src="/images/eye_examinations/{{ ((isset($echoes->image_eye_boll_le))? $echoes->image_eye_boll_le : 'default.png' ) }}" alt="{{ Auth::user()->name }}">
+								<img data-src="" src="/images/eye_examinations/{{ ((isset($eye_examination->image_eye_boll_le))? $eye_examination->image_eye_boll_le : 'default.png' ) }}" alt="...">
 							</div>
 							<div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 248px;"></div>
 							<div class="mt-2">
@@ -287,7 +298,7 @@
 					<td class="text-center">
 						<div class="fileinput fileinput-new" data-provides="fileinput">
 							<div class="fileinput-new img-thumbnail" style="max-width: 100%;">
-								<img data-src="" src="/images/eye_examinations/{{ ((isset($echoes->image_locver_lide_re))? $echoes->image_locver_lide_re : 'default.png' ) }}" alt="{{ Auth::user()->name }}">
+								<img data-src="" src="/images/eye_examinations/{{ ((isset($eye_examination->image_locver_lide_re))? $eye_examination->image_locver_lide_re : 'default.png' ) }}" alt="...">
 							</div>
 							<div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 248px;"></div>
 							<div class="mt-2">
@@ -303,7 +314,7 @@
 					<td class="text-center">
 						<div class="fileinput fileinput-new" data-provides="fileinput">
 							<div class="fileinput-new img-thumbnail" style="max-width: 100%;">
-								<img data-src="" src="/images/eye_examinations/{{ ((isset($echoes->image_locver_lide_le))? $echoes->image_locver_lide_le : 'default.png' ) }}" alt="{{ Auth::user()->name }}">
+								<img data-src="" src="/images/eye_examinations/{{ ((isset($eye_examination->image_locver_lide_le))? $eye_examination->image_locver_lide_le : 'default.png' ) }}" alt="...">
 							</div>
 							<div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 248px;"></div>
 							<div class="mt-2">

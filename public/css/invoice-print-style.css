@@ -24,19 +24,39 @@
 }
 
 .eye_examination-print {
-
+	width: 21cm;
+	height: 29.7cm;
+	margin: 0 auto;
+	background: #fff;
+	border: 1px solid #ededed;
+	padding: 1cm;
 }
 .eye_examination-print .table-info-1{
-
+	width: 70%;
+	margin: 0 auto;
+}
+.eye_examination-print .table-info-1 th,
+.eye_examination-print .table-info-1 td{
+	border: 1px solid #0070C0;
+	padding: 2px 5px;
+}
+.eye_examination-print .table-image{
+	width: 85%;
+}
+.eye_examination-print .table-image td{
+	padding: 2px 5px;
+}
+.eye_examination-print .table-image img{
+	height: 60px !important;
+    margin-left: 0;
 }
 .eye_examination-print .table-info-2{
-
+	width: 85%;
+	margin: 10px 0;
 }
-.eye_examination-print .table-info-image{
-
-}
-.eye_examination-print .table-info-3{
-
+.eye_examination-print .table-info-2 td{
+	vertical-align: top;
+	padding: 2px 5px;
 }
 
 .labor-print{
@@ -108,6 +128,7 @@
 }
 
 
+.eye_examination-print *,
 .invoice-print *,
 .prescription-print *,
 .labor-print *{
@@ -191,6 +212,7 @@ table tfoot { display: table-row-group!important; }
 		margin: 0;
 	}
 
+	.eye_examination-print *,
 	.labor-print *,
 	.invoice-print *,
 	.prescription-print *{
@@ -200,6 +222,7 @@ table tfoot { display: table-row-group!important; }
 		-o-print-color-adjust: exact !important;
 	}
 
+	.eye_examination-print,
 	.labor-print,
 	.invoice-print,
 	.prescription-print{

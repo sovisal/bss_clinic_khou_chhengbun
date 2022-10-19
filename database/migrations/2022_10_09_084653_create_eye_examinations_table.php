@@ -6,16 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateEyeExaminationsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('eye_examinations', function (Blueprint $table) {
-            $table->id();
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('eye_examinations', function (Blueprint $table) {
+			$table->id();
 			$table->date('date');
+			$table->string('pt_no');
+			$table->string('pt_name');
+			$table->string('pt_age')->nullable();
+			$table->string('pt_gender')->nullable();
+			$table->string('pt_phone')->nullable();
+			$table->string('pt_village')->nullable();
+			$table->string('pt_commune')->nullable();
 			$table->string('plain_eye_vare')->nullable();
 			$table->string('plain_eye_vale')->nullable();
 			$table->string('with_ph_vare')->nullable();
@@ -50,6 +57,9 @@ class CreateEyeExaminationsTable extends Migration
 			$table->string('image_eye_boll_le')->nullable();
 			$table->string('image_locver_lide_re')->nullable();
 			$table->string('image_locver_lide_le')->nullable();
+
+			$table->unsignedBigInteger('pt_district_id')->nullable();
+			$table->unsignedBigInteger('pt_province_id')->nullable();
 			$table->unsignedBigInteger('patient_id')->nullable();
 			$table->unsignedBigInteger('created_by');
 			$table->unsignedBigInteger('updated_by');
@@ -69,16 +79,16 @@ class CreateEyeExaminationsTable extends Migration
 				->references('id')->on('users')
 				->onDelete('no action')
 				->onUpdate('no action');
-        });
-    }
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('eye_examinations');
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::dropIfExists('eye_examinations');
+	}
 }

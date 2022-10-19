@@ -11,8 +11,10 @@ Route::group(['prefix' => 'eye_examination', 'as' => 'eye_examination.', 'namesp
 	Route::get('/{eye_examination}/edit', 'EyeExaminationController@edit')->name('edit')->middleware('can:EyeExamination Edit');
 	Route::put('/{eye_examination}/update', 'EyeExaminationController@update')->name('update')->middleware('can:EyeExamination Edit');
 	Route::delete('/{eye_examination}/delete', 'EyeExaminationController@destroy')->name('destroy')->middleware('can:EyeExamination Delete');
-	Route::get('/{eye_examination}/print', 'EyeExaminationController@print')->name('print')->middleware('can:EyeExamination Print');
-	
+	Route::get('/{eye_examination}/print', 'EyeExaminationController@print')->name('print');
+
+	Route::post('/getDatatable', 'EyeExaminationController@getDatatable')->name('getDatatable');
+
 });
 
 

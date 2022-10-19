@@ -22,7 +22,7 @@ class EyeExaminationController extends Controller
 	public function __construct(EyeExaminationRepository $repository)
 	{
 		$this->eye_examination = $repository;
-		$this->path = public_path('images/eye_examinations/');
+		$this->path = public_path('images\eye_examinations\\');
 	}
 
 	public function getDatatable(Request $request)
@@ -60,7 +60,7 @@ class EyeExaminationController extends Controller
 
 	public function getEyeExaminationPreview(Request $request)
 	{
-		return $this->eye_examination->getEyeExaminationPreview($request->id, $this->path);
+		return $this->eye_examination->getEyeExaminationPreview($request->id);
 	}
 
 
@@ -101,6 +101,6 @@ class EyeExaminationController extends Controller
 	{
 		// Redirect
 		return redirect()->route('eye_examination.index')
-			->with('success', __('alert.crud.success.delete', ['name' => Auth::user()->module()]) . str_pad(($this->eye_examination->destroy($request, $eye_examination)), 6, "0", STR_PAD_LEFT));
+			->with('success', __('alert.crud.success.delete', ['name' => Auth::user()->module()]) . str_pad(($this->eye_examination->destroy($request, $eye_examination, $this->path)), 6, "0", STR_PAD_LEFT));
 	}
 }

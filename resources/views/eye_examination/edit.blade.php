@@ -18,7 +18,7 @@
 
 		<div class="card-tools">
 			@can('Echo Index')
-			<a href="{{route('eye_examination.index', $type)}}" class="btn btn-danger btn-sm btn-flat"><i class="fa fa-table"></i> &nbsp;{{ __('label.buttons.back_to_list', [ 'name' => Auth::user()->module() ]) }}</a>
+			<a href="{{route('eye_examination.index')}}" class="btn btn-danger btn-sm btn-flat"><i class="fa fa-table"></i> &nbsp;{{ __('label.buttons.back_to_list', [ 'name' => Auth::user()->module() ]) }}</a>
 			@endcan
 		</div>
 
@@ -28,7 +28,7 @@
 
 	</div>
 
-	{!! Form::open(['url' => route('eye_examination.update', [$type, $eye_examination->id]),'method' => 'post', 'enctype'=>'multipart/form-data','class' => 'mt-3']) !!}
+	{!! Form::open(['url' => route('eye_examination.update', [$eye_examination->id]),'method' => 'post', 'enctype'=>'multipart/form-data','class' => 'mt-3']) !!}
 	{!! Form::hidden('_method', 'PUT') !!}
 
 	<div class="card-body">
@@ -46,7 +46,7 @@
 
 <div class="position-relative">
 	@can("Echo Print")
-		<button type="button" class="btn btn-flat btn-success position-absolute mr-9 mt-5 btn-print-eye_examination" data-url="{{ route('eye_examination.print', [$type, $eye_examination->id]) }}"><i class="fa fa-print"></i> {{ __("label.buttons.print") }}</button>
+		<button type="button" class="btn btn-flat btn-success position-absolute mr-9 mt-5 btn-print-eye_examination" data-url="{{ route('eye_examination.print', [$eye_examination->id]) }}"><i class="fa fa-print"></i> {{ __("label.buttons.print") }}</button>
 	@endCan
 </div>
 

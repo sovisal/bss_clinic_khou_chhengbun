@@ -12,25 +12,21 @@
 	<div class="card">
 		<div class="card-header">
 			<b>{!! Auth::user()->subModule() !!}</b>
-
 			<div class="card-tools">
-				@can('Echoes Create')
+				@can('EyeExaminationes Create')
 				<a href="{{route('eye_examination.create', $type)}}" class="btn btn-success btn-flat btn-sm"><i class="fa fa-plus"></i> &nbsp;{{ __('label.buttons.create') }}</a>
 				@endcan
 			</div>
-
 			<!-- Error Message -->
 			@component('components.crud_alert')
 			@endcomponent
-
 		</div>
 
 		<div class="card-body">
-
 			<div class="row justify-content-center">
 				<div class="col-sm-3">
 					<div class="form-group">
-						{!! Html::decode(Form::label('date', __('label.form.eye_examination.choose_date')." <small>*</small>")) !!}
+						{!! Html::decode(Form::label('date', __('label.form.labor.choose_date')." <small>*</small>")) !!}
 						<div class="input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fa fa-calendar-alt"></i></span>
@@ -43,13 +39,15 @@
 				</div>
 			</div>
 
-      <table class="table table-bordered dt-server expandable-table" width="100%" id="eye_examination_table">
+	  <table class="table table-bordered dt-server expandable-table" width="100%" id="eye_examination_table">
 				<thead>
 					<tr>
-						<th class="text-center">{!! __('module.table.date') !!}</th>
-						<th class="text-center" width="25%">{!! __('module.table.eye_examination.pt_name') !!}</th>
-						<th class="text-center" width="10%">{!! __('module.table.eye_examination.pt_phone') !!}</th>
-						<th class="text-center">{!! __('module.table.address') !!}</th>
+						<th class="text-center" width="10%">{!! __('module.table.eye_examination.number') !!}</th>
+						<th class="text-center" width="10%">{!! __('module.table.date') !!}</th>
+						<th class="text-center">{!! __('module.table.labor.pt_name') !!}</th>
+						<th class="text-center" width="10%">{!! __('module.table.labor.pt_phone') !!}</th>
+						<th class="text-center" width="10%">{!! __('module.table.labor.pt_age') !!}</th>
+						<th class="text-center" width="10%">{!! __('label.form.labor.pt_gender') !!}</th>
 						<th width="12%" class="text-center">{!! __('module.table.action') !!}</th>
 					</tr>
 				</thead>
@@ -59,7 +57,7 @@
 			</table>
 		</div>
 
-    <span class="sr-only" id="deleteAlert" data-title="{{ __('alert.swal.title.delete', ['name' => Auth::user()->module()]) }}" data-text="{{ __('alert.swal.text.unrevertible') }}" data-btnyes="{{ __('alert.swal.button.yes') }}" data-btnno="{{ __('alert.swal.button.no') }}" data-rstitle="{{ __('alert.swal.result.title.success') }}" data-rstext="{{ __('alert.swal.result.text.delete') }}"> Delete Message </span>
+	<span class="sr-only" id="deleteAlert" data-title="{{ __('alert.swal.title.delete', ['name' => Auth::user()->module()]) }}" data-text="{{ __('alert.swal.text.unrevertible') }}" data-btnyes="{{ __('alert.swal.button.yes') }}" data-btnno="{{ __('alert.swal.button.no') }}" data-rstitle="{{ __('alert.swal.result.title.success') }}" data-rstext="{{ __('alert.swal.result.text.delete') }}"> Delete Message </span>
 
 	</div>
 
@@ -71,36 +69,31 @@
 @section('js')
 	<script src="{{ asset('/js/daterangepicker.js') }}"></script>
 	<script type="text/javascript">
-
-
-		$('#dateRangePicker').daterangepicker(
-      {
-        ranges   : {
-          'Today'       : [moment(), moment()],
-          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
-          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
-          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        },
-        startDate: moment().startOf('month'),
-        endDate  : moment().endOf('month')
-      },
-      function (start, end) {
-        $('#from').val(start.format('YYYY-MM-DD'));
-        $('#to').val(end.format('YYYY-MM-DD'));
-        getDatatable(start.format('YYYY-MM-DD'), end.format('YYYY-MM-DD'))
-      }
-    )
-    // $('#dateRangePicker').val('');
-
+		$('#dateRangePicker').daterangepicker({
+			ranges: {
+				'Today'       : [moment(), moment()],
+				'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+				'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+				'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+				'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+				'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+				},
+				startDate: moment().startOf('month'),
+				endDate  : moment().endOf('month')
+			},
+			function (start, end) {
+				$('#from').val(start.format('YYYY-MM-DD'));
+				$('#to').val(end.format('YYYY-MM-DD'));
+				getDatatable(start.format('YYYY-MM-DD'), end.format('YYYY-MM-DD'))
+			}
+		)
 
 		getDatatable(moment().startOf('month').format('YYYY-MM-DD'), moment().endOf('month').format('YYYY-MM-DD'));
 
 		function getDatatable(from, to) {
 			// Load Data to datatable
 			$('#eye_examination_table').DataTable().destroy();
-			dataTableEcho = $('#eye_examination_table').DataTable({
+			dataTableEyeExamination = $('#eye_examination_table').DataTable({
 				"language": (('{{ session('locale') }}' == 'en')? '' : datatableKH),
 				processing: true,
 				serverSide: true,
@@ -110,38 +103,35 @@
 					headers: {
 						'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 					},
-					url: '{{ route('eye_examination.getDatatable', $type) }}',
+					url: '{{ route('eye_examination.getDatatable') }}',
 					data: { 'from' : from, 'to' : to },
 					type: 'post',
 					dataSrc: function(json) { return json.data;  }
 				},
 				columns: [
+					{data: 'number', name: 'number', className: 'text-center'},
 					{data: 'date', name: 'date', className: 'text-center'},
 					{data: 'pt_name', name: 'pt_name'},
 					{data: 'pt_phone', name: 'pt_phone'},
-					{data: 'pt_address_full_text', name: 'pt_address_full_text'},
+					{data: 'pt_age', name: 'pt_age', className: 'text-center'},
+					{data: 'pt_gender', name: 'pt_gender', className: 'text-center'},
 					{data: 'actions', name: 'actions', className: 'text-center', searchable: false, sortable: false}
 				],
 				rowCallback: function( row, data ) {
-
-					$('td:eq(4)', row).html( `@Can("Echo Print")
-																			<button type="button" data-url="/eye_examination/{{ $type }}/${ data.id }/print" class="btn btn-sm btn-flat btn-success btn-print-eye_examination"><i class="fa fa-print"></i></button>
-																		@endCan
-																		@Can("Echo Edit")
-																			<a href="/eye_examination/{{ $type }}/${ data.id }/edit" class="btn btn-sm btn-flat btn-info"><i class="fa fa-pencil-alt"></i></a>
-																		@endCan
-																		@Can("Echo Delete")
-																			<button type="button" class="btn btn-sm btn-flat btn-danger BtnDeleteConfirm" value="${ data.id }"><i class="fa fa-trash-alt"></i></button>
-																			<form action="/eye_examination/{{ $type }}/${ data.id }/delete" id="form-item-${ data.id }" class="sr-only" method="POST" accept-charset="UTF-8">
-																				{{ csrf_field() }}
-																				<input type="hidden" name="_method" value="DELETE" />
-																				<input type="hidden" name="passwordDelete" value="" />
-																			</form>
-																		@endCan` );
-
+					$('td:eq(6)', row).html( `<button type="button" data-url="/eye_examination/${ data.id }/print" class="btn btn-sm btn-flat btn-success btn-print-eye_examination"><i class="fa fa-print"></i></button>
+												@Can("EyeExamination Edit")
+													<a href="/eye_examination/${ data.id }/edit" class="btn btn-sm btn-flat btn-info"><i class="fa fa-pencil-alt"></i></a>
+												@endCan
+												@Can("EyeExamination Delete")
+													<button type="button" class="btn btn-sm btn-flat btn-danger BtnDeleteConfirm" value="${ data.id }"><i class="fa fa-trash-alt"></i></button>
+													<form action="/eye_examination/${ data.id }/delete" id="form-item-${ data.id }" class="sr-only" method="POST" accept-charset="UTF-8">
+														{{ csrf_field() }}
+														<input type="hidden" name="_method" value="DELETE" />
+														<input type="hidden" name="passwordDelete" value="" />
+													</form>
+												@endCan` );
 				},
 				"initComplete": function( settings, json ) {
-
 					$('#eye_examination_table [type="search"]').addClass('sr-only');
 					$('#eye_examination_table_search_input').remove();
 					$('#eye_examination_table_table_filter').append('<input type="text" class="form-control input-sm" id="eye_examination_table_search_input">');
@@ -150,19 +140,15 @@
 							$('#eye_examination_table [type="search"]').val($(this).val()).keyup();
 						}
 					});
-
 					setTimeout( function () {
 						if ($('[name="txt_filter_search"]').val() != '' ) {
 							$('#eye_examination_table_search_input').val($('[name="txt_filter_search"]').val());
 							$('#eye_examination_table [type="search"]').val($('[name="txt_filter_search"]').val()).keyup();
 							$('[name="txt_filter_search"]').val('');
 						}
-
 					}, 250);
-
 				},
 				"drawCallback": function( settings, json ) {
-
 					// Change Status button Click
 					$('.btn_status').click(function () {
 						var btn_status = $(this);
@@ -200,7 +186,6 @@
 								});
 							}
 						})
-
 					});
 
 					$('.BtnDeleteConfirm').click(function () {

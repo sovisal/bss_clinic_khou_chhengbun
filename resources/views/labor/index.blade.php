@@ -22,7 +22,7 @@
 	<div class="card">
 		<div class="card-header">
 			<b>{!! Auth::user()->subModule() !!}</b>
-			
+
 			<div class="card-tools">
 				@can('Labor Report')
 				<a href="{{route('labor.report')}}" class="btn btn-info btn-sm btn-flat"><i class="fa fa-file-alt"></i> &nbsp;{{ __('label.buttons.report', [ 'name' => Auth::user()->module() ]) }}</a>
@@ -52,7 +52,7 @@
 					</div>
 				</div>
 			</div>
-			
+
       <table class="table table-bordered dt-server expandable-table" width="100%" id="labor_table">
 				<thead>
 					<tr>
@@ -67,7 +67,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					
+
 				</tbody>
 			</table>
 		</div>
@@ -78,7 +78,7 @@
 
 	{{-- Password Confirm modal --}}
 	@component('components.confirm_password')@endcomponent
-	
+
 @endsection
 
 @section('js')
@@ -129,10 +129,10 @@
 					$('td:eq(5)', row).html(`${data.pt_age} ${_age_type}`);
 					$('td:eq(7)', row).html( `@Can("Labor Print")
 						<button type="button" data-url="/labor/${ data.id }/print" class="btn btn-sm btn-flat btn-success btn-print-labor"><i class="fa fa-print"></i></button>
-					@endCan 
+					@endCan
 					@Can("Labor Edit")
 						<a href="/labor/${ data.type }/${ data.id }/edit" class="btn btn-sm btn-flat btn-info"><i class="fa fa-pencil-alt"></i></a>
-					@endCan 
+					@endCan
 					@Can("Labor Delete")
 						<button type="button" class="btn btn-sm btn-flat btn-danger BtnDeleteConfirm" value="${ data.id }"><i class="fa fa-trash-alt"></i></button>
 						<form action="/labor/${ data.type }/${ data.id }/delete" id="form-item-${ data.id }" class="sr-only" method="POST" accept-charset="UTF-8">
@@ -220,7 +220,7 @@
 							})
 						}
 					});
-					
+
 					function openPrintWindow(url, name) {
 						var printWindow = window.open(url, name, "width="+ screen.availWidth +",height="+ screen.availHeight +",_blank");
 						var printAndClose = function () {
@@ -229,7 +229,7 @@
 								printWindow.print();
 								printWindow.close();
 							}
-						}  
+						}
 							var sched = setInterval(printAndClose, 2000);
 					};
 
