@@ -159,8 +159,9 @@ class GlobalComponent extends Controller
 	{
 		$html_footer_comeback ="
 								<div class='color_red' style=' text-align: center; position: absolute; bottom: 0.4cm; left: 0; width: 100%; padding: 0 0.8cm;'>
+									<div class='color_red'>". $text ."</div>
 									<div style='padding-top: 10px; font-weight: bold;'>
-										លេខទូរស័ព្ទៈ ". Auth::user()->setting()->phone ."
+										លេខទូរស័ព្ទៈ <span class='color_red'>". Auth::user()->setting()->phone ."</span>
 									</div>
 								</div>
 							";

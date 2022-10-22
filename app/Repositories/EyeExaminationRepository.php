@@ -162,7 +162,7 @@ class EyeExaminationRepository
 					</tbody>
 				</table>
 				<br/>
-				' . $GlobalComponent->FooterComeBackText('សូមត្រលប់មកវិញ តាមការណាត់ជួប និងមានអាការៈខុសពីធម្មតា!') . '
+				' . $GlobalComponent->FooterComeBackText('សូមយកវេជ្ជបញ្ជានេះមកវិញពេលមកពិនិត្យលើកក្រោយ') . '
 				<table class="table-footer" width="100%">
 				' . $GlobalComponent->DoctorSignature() . '
 				</table>
