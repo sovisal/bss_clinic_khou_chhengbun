@@ -17,7 +17,7 @@
 		<b>{!! Auth::user()->subModule() !!}</b>
 
 		<div class="card-tools">
-			@can('Echo Index')
+			@can('EyeExamination Index')
 			<a href="{{route('eye_examination.index')}}" class="btn btn-danger btn-sm btn-flat"><i class="fa fa-table"></i> &nbsp;{{ __('label.buttons.back_to_list', [ 'name' => Auth::user()->module() ]) }}</a>
 			@endcan
 		</div>
@@ -45,9 +45,7 @@
 </div>
 
 <div class="position-relative">
-	@can("Echo Print")
-		<button type="button" class="btn btn-flat btn-success position-absolute mr-9 mt-5 btn-print-eye_examination" data-url="{{ route('eye_examination.print', [$eye_examination->id]) }}"><i class="fa fa-print"></i> {{ __("label.buttons.print") }}</button>
-	@endCan
+	<button type="button" class="btn btn-flat btn-success position-absolute mr-9 mt-5 btn-print-eye_examination" data-url="{{ route('eye_examination.print', [$eye_examination->id]) }}"><i class="fa fa-print"></i> {{ __("label.buttons.print") }}</button>
 </div>
 
 <div class="pb-2 print-preview">

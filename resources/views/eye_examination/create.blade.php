@@ -11,7 +11,7 @@
 	<div class="card-header">
 		<b>{!! Auth::user()->subModule() !!}</b>
 		<div class="card-tools">
-			@can('Echo Index')
+			@can('EyeExamination Index')
 			<a href="{{route('eye_examination.index')}}" class="btn btn-danger btn-sm btn-flat">
 				<iclass="fa fa-table"></iclass=> &nbsp;{{ __('label.buttons.back_to_list', [ 'name' => Auth::user()->module() ]) }}
 			</a>

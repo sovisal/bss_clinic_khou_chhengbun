@@ -31,28 +31,28 @@
 						<tr>
 							<td class="text-right bg-light-gray">{!! Html::decode(Form::label('initial_iop_re', __('label.form.eye_examination.plain_eye'))) !!}</td>
 							<td>
-								{!! Form::text('plain_eye_vare', ((isset($eye_examination->plain_eye_vare))? $eye_examination->plain_eye_vare : '' ), ['class' => 'form-control'. (($errors->has("plain_eye_vare"))? "is-invalid" : ""), 'autocomplete' => 'off', 'required']) !!}
+								{!! Form::text('plain_eye_vare', ((isset($eye_examination->plain_eye_vare))? $eye_examination->plain_eye_vare : '' ), ['class' => 'form-control'. (($errors->has("plain_eye_vare"))? "is-invalid" : ""), 'autocomplete' => 'off']) !!}
 							</td>
 							<td>
-								{!! Form::text('plain_eye_vale', ((isset($eye_examination->plain_eye_vale))? $eye_examination->plain_eye_vale : '' ), ['class' => 'form-control'. (($errors->has("plain_eye_vale"))? "is-invalid" : ""), 'autocomplete' => 'off', 'required']) !!}
+								{!! Form::text('plain_eye_vale', ((isset($eye_examination->plain_eye_vale))? $eye_examination->plain_eye_vale : '' ), ['class' => 'form-control'. (($errors->has("plain_eye_vale"))? "is-invalid" : ""), 'autocomplete' => 'off']) !!}
 							</td>
 						</tr>
 						<tr>
 							<td class="text-right bg-light-gray">{!! Html::decode(Form::label('initial_iop_re', __('label.form.eye_examination.with_ph'))) !!}</td>
 							<td>
-								{!! Form::text('with_ph_vare', ((isset($eye_examination->with_ph_vare))? $eye_examination->with_ph_vare : '' ), ['class' => 'form-control'. (($errors->has("with_ph_vare"))? "is-invalid" : ""), 'autocomplete' => 'off', 'required']) !!}
+								{!! Form::text('with_ph_vare', ((isset($eye_examination->with_ph_vare))? $eye_examination->with_ph_vare : '' ), ['class' => 'form-control'. (($errors->has("with_ph_vare"))? "is-invalid" : ""), 'autocomplete' => 'off']) !!}
 							</td>
 							<td>
-								{!! Form::text('with_ph_vale', ((isset($eye_examination->with_ph_vale))? $eye_examination->with_ph_vale : '' ), ['class' => 'form-control'. (($errors->has("with_ph_vale"))? "is-invalid" : ""), 'autocomplete' => 'off', 'required']) !!}
+								{!! Form::text('with_ph_vale', ((isset($eye_examination->with_ph_vale))? $eye_examination->with_ph_vale : '' ), ['class' => 'form-control'. (($errors->has("with_ph_vale"))? "is-invalid" : ""), 'autocomplete' => 'off']) !!}
 							</td>
 						</tr>
 						<tr>
 							<td class="text-right bg-light-gray">{!! Html::decode(Form::label('initial_iop_re', __('label.form.eye_examination.with_glasses'))) !!}</td>
 							<td>
-								{!! Form::text('with_glasses_vare', ((isset($eye_examination->with_glasses_vare))? $eye_examination->with_glasses_vare : '' ), ['class' => 'form-control'. (($errors->has("with_glasses_vare"))? "is-invalid" : ""), 'autocomplete' => 'off', 'required']) !!}
+								{!! Form::text('with_glasses_vare', ((isset($eye_examination->with_glasses_vare))? $eye_examination->with_glasses_vare : '' ), ['class' => 'form-control'. (($errors->has("with_glasses_vare"))? "is-invalid" : ""), 'autocomplete' => 'off']) !!}
 							</td>
 							<td>
-								{!! Form::text('with_glasses_vale', ((isset($eye_examination->with_glasses_vale))? $eye_examination->with_glasses_vale : '' ), ['class' => 'form-control'. (($errors->has("with_glasses_vale"))? "is-invalid" : ""), 'autocomplete' => 'off', 'required']) !!}
+								{!! Form::text('with_glasses_vale', ((isset($eye_examination->with_glasses_vale))? $eye_examination->with_glasses_vale : '' ), ['class' => 'form-control'. (($errors->has("with_glasses_vale"))? "is-invalid" : ""), 'autocomplete' => 'off']) !!}
 							</td>
 						</tr>
 					</tbody>
