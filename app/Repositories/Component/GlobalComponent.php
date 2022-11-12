@@ -144,15 +144,16 @@ class GlobalComponent extends Controller
 
 	public static function DoctorSignature($doctor_name = '', $title_signature = 'គ្រូពេទ្យព្យាបាល')
 	{
-		return "
-		<div class='text-center doctor_signature' style='position: absolute; right: 30px; bottom: 1.8cm;'>
-				<div class='KHOSMoulLight'>$title_signature</div>
-				<div class='sign_box'>
-					<img src='/images/setting/doctor_signature.jpg' alt=''>
-				</div>
-				<div><span class='KHOSMoulLight' style='font-size: 14px;'>គ្រូពេទ្យ.</span> <span class='KHOSMoulLight' style='font-size: 16px;'>" . ($doctor_name ?: Auth::user()->setting()->sign_name_kh) . "</span></div>
-			</div>
-		";
+		return '';
+		// return "
+		// <div class='text-center doctor_signature' style='position: absolute; right: 30px; bottom: 1.8cm;'>
+		// 		<div class='KHOSMoulLight'>$title_signature</div>
+		// 		<div class='sign_box'>
+		// 			<img src='/images/setting/doctor_signature.jpg' alt=''>
+		// 		</div>
+		// 		<div><span class='KHOSMoulLight' style='font-size: 14px;'>គ្រូពេទ្យ.</span> <span class='KHOSMoulLight' style='font-size: 16px;'>" . ($doctor_name ?: Auth::user()->setting()->sign_name_kh) . "</span></div>
+		// 	</div>
+		// ";
 	}
 
 	public function FooterComeBackText($text = '', $color = 'color_red')
