@@ -38,7 +38,21 @@ class EyeExaminationController extends Controller
 	public function create()
 	{
 		$this->data = [
-			'patients' => Patient::getSelectData('id', 'name', '', 'name' ,'asc'),
+			'patients' => Patient::getSelectData('id', 'name', '', 'name', 'asc'),
+			'eye_sign_range' => [
+				'' => '----- Please Select -----',
+				'6/120' => '6/120',
+				'6/60' => '6/60',
+				'6/36' => '6/36',
+				'6/24' => '6/24',
+				'6/18' => '6/18',
+				'6/15' => '6/15',
+				'6/12' => '6/12',
+				'6/9' => '6/9',
+				'6/7.5' => '6/7.5',
+				'6/6' => '6/6',
+				'6/5' => '6/5'
+			],
 		];
 		return view('eye_examination.create', $this->data);
 	}
@@ -68,9 +82,23 @@ class EyeExaminationController extends Controller
 	{
 		$this->data = [
 			'eye_examination' => $eye_examination,
-			'medicines' => Medicine::getSelectData('id', 'name', '', 'name' ,'asc'),
-			'services' => Service::select('id', 'name', 'quantity', 'price', 'description')->orderBy('name' ,'asc')->get(),
-			'patients' => Patient::getSelectData('id', 'name', '', 'name' ,'asc'),
+			'medicines' => Medicine::getSelectData('id', 'name', '', 'name', 'asc'),
+			'services' => Service::select('id', 'name', 'quantity', 'price', 'description')->orderBy('name', 'asc')->get(),
+			'patients' => Patient::getSelectData('id', 'name', '', 'name', 'asc'),
+			'eye_sign_range' => [
+				'' => '----- Please Select -----',
+				'6/120' => '6/120',
+				'6/60' => '6/60',
+				'6/36' => '6/36',
+				'6/24' => '6/24',
+				'6/18' => '6/18',
+				'6/15' => '6/15',
+				'6/12' => '6/12',
+				'6/9' => '6/9',
+				'6/7.5' => '6/7.5',
+				'6/6' => '6/6',
+				'6/5' => '6/5'
+			],
 			'eye_examination_preview' => $this->eye_examination->getEyeExaminationPreview($eye_examination->id, $this->path)->getData()->eye_examination_detail,
 		];
 

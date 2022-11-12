@@ -55,12 +55,12 @@ class EyeExaminationRequest extends FormRequest
 			'lens_le' => 'nullable|string|max:190',
 			'retinal_reflex_re' => 'nullable|string|max:190',
 			'retinal_reflex_le' => 'nullable|string|max:190',
-			'image_uper_lide_re' => 'nullable|mimes:jpeg,jpg,png|max:2048',
-			'image_uper_lide_le' => 'nullable|mimes:jpeg,jpg,png|max:2048',
-			'image_eye_boll_re' => 'nullable|mimes:jpeg,jpg,png|max:2048',
-			'image_eye_boll_le' => 'nullable|mimes:jpeg,jpg,png|max:2048',
-			'image_locver_lide_re' => 'nullable|mimes:jpeg,jpg,png|max:2048',
-			'image_locver_lide_le' => 'nullable|mimes:jpeg,jpg,png|max:2048',
+			'image_uper_lide_re' => 'nullable|mimes:jpeg,jpg,png|max:5120',
+			'image_uper_lide_le' => 'nullable|mimes:jpeg,jpg,png|max:5120',
+			'image_eye_boll_re' => 'nullable|mimes:jpeg,jpg,png|max:5120',
+			'image_eye_boll_le' => 'nullable|mimes:jpeg,jpg,png|max:5120',
+			'image_locver_lide_re' => 'nullable|mimes:jpeg,jpg,png|max:5120',
+			'image_locver_lide_le' => 'nullable|mimes:jpeg,jpg,png|max:5120',
 		];
 	}
 }

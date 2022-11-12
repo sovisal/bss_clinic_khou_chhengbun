@@ -1,4 +1,4 @@
-.invoice-print{
+.invoice-print {
 	width: 21cm;
 	height: 29.7cm;
 	margin: 0 auto;
@@ -6,20 +6,20 @@
 	border: 1px solid #ededed;
 	padding: 1cm;
 }
-.invoice-print .table-information td{
+.invoice-print .table-information td {
 	padding-bottom: 8px;
 }
-.invoice-print .table-detail tfoot th{
+.invoice-print .table-detail tfoot th {
 	padding: 6px;
 }
 .invoice-print .table-detail thead th,
 .invoice-print .table-detail tfoot th:nth-child(3),
 .invoice-print .table-detail tfoot th:nth-child(4),
-.invoice-print .table-detail td{
+.invoice-print .table-detail td {
 	padding: 6px;
-	border: 1px solid #0070C0;
+	border: 1px solid #0070c0;
 }
-.invoice-print small{
+.invoice-print small {
 	font-size: 10px !important;
 }
 
@@ -31,35 +31,65 @@
 	border: 1px solid #ededed;
 	padding: 1cm;
 }
-.eye_examination-print .table-info-1{
+.eye_examination-print .table-info-1 {
 	width: 70%;
 	margin: 0 auto;
 }
 .eye_examination-print .table-info-1 th,
-.eye_examination-print .table-info-1 td{
-	border: 1px solid #0070C0;
+.eye_examination-print .table-info-1 td {
+	border: 1px solid #0070c0;
 	padding: 2px 5px;
 }
-.eye_examination-print .table-image{
+.eye_examination-print .table-image {
 	width: 85%;
 }
-.eye_examination-print .table-image td{
+.eye_examination-print .table-image td {
 	padding: 2px 5px;
 }
-.eye_examination-print .table-image img{
+.eye_examination-print .table-image img {
 	height: 60px !important;
-    margin-left: 0;
+	margin-left: 0;
 }
-.eye_examination-print .table-info-2{
+.eye_examination-print .table-info-2 {
 	width: 85%;
-	margin: 10px 0;
+	margin: 15px 0;
 }
-.eye_examination-print .table-info-2 td{
+.eye_examination-print .table-info-2 tr td {
 	vertical-align: top;
-	padding: 2px 5px;
+	padding: 5px 5px;
 }
 
-.labor-print{
+.eye_examination-print .table-info-3 {
+	width: 85%;
+	margin-top: 15px;
+}
+.eye_examination-print .table-info-3 tr {
+	border-bottom: 1px dotted #0070c0;
+}
+.eye_examination-print .table-info-3 tr td {
+	vertical-align: top;
+	padding: 11px 5px 0 5px;
+	line-height: 14px;
+}
+.eye_examination-print .table-info-3 tr td:first-child {
+	text-align: right;
+	padding-right: 10px;
+}
+.eye_examination-print .table-info-3 tr td:last-child {
+	text-align: left;
+	padding-left: 10px;
+}
+.eye_examination-print .table-info-3 tr td:nth-of-type(2) {
+	text-align: center;
+}
+.eye_examination-print .table-info-3 tr td:nth-of-type(2) span {
+	text-align: center;
+	font-weight: bold;
+	background: #fff;
+	padding: 0 2px 2px 2px;
+}
+
+.labor-print {
 	width: 21cm;
 	height: 32.5cm;
 	margin: 0 auto;
@@ -67,14 +97,14 @@
 	border: 1px solid #ededed;
 	padding: 1cm;
 }
-.labor-print .table-detail td{
+.labor-print .table-detail td {
 	padding: 6px;
 }
-.labor-print small{
+.labor-print small {
 	font-size: 10px !important;
 }
 
-.prescription-print{
+.prescription-print {
 	width: 21cm;
 	height: 29.7cm;
 	margin: 0 auto;
@@ -82,29 +112,29 @@
 	border: 1px solid #ededed;
 	padding: 1cm;
 }
-.prescription-print .table-information td{
+.prescription-print .table-information td {
 	padding-bottom: 8px;
 }
 .prescription-print .table-detail thead th,
-.prescription-print .table-detail td{
+.prescription-print .table-detail td {
 	font-size: 13px;
 	padding: 6px;
-	border: 1px solid #0070C0;
+	border: 1px solid #0070c0;
 }
-.prescription-print .table-detail tfoot th{
+.prescription-print .table-detail tfoot th {
 	padding: 6px;
 }
-.prescription-print small{
+.prescription-print small {
 	font-size: 13px;
 }
-.prescription-print .table-detail td{
+.prescription-print .table-detail td {
 	font-size: 15px;
 }
 
-.echoes-print .echo_description{
-  font-family: 'Arial Black','Khmer OS Siemreap';
+.echoes-print .echo_description {
+	font-family: 'Arial Black', 'Khmer OS Siemreap';
 }
-.echoes-print{
+.echoes-print {
 	width: 21cm;
 	height: 29.7cm;
 	margin: 0 auto;
@@ -112,93 +142,100 @@
 	border: 1px solid #ededed;
 	padding: 1cm;
 }
-.echoes-print .table-information td{
+.echoes-print .table-information td {
 	padding-bottom: 8px;
 }
 .echoes-print .table-detail thead th,
-.echoes-print .table-detail td{
+.echoes-print .table-detail td {
 	font-size: 13px;
 	padding: 8px 6px;
 }
-.echoes-print .table-detail tfoot th{
+.echoes-print .table-detail tfoot th {
 	padding: 6px;
 }
-.echoes-print small{
+.echoes-print small {
 	font-size: 10px !important;
 }
-
 
 .eye_examination-print *,
 .invoice-print *,
 .prescription-print *,
-.labor-print *{
-  font-family: 'Arial','Khmer OS Siemreap', 'Wingdings 2';
-	color: #0070C0;
+.labor-print * {
+	font-family: 'Arial', 'Khmer OS Siemreap', 'Wingdings 2';
+	color: #0070c0;
 }
-.table-header *{
-  font-family: 'Arial Black','Khmer OS Siemreap' !important;
+.table-header * {
+	font-family: 'Arial Black', 'Khmer OS Siemreap' !important;
 }
-.KHOSMoulLight{
-  font-family: 'Arial Black','Khmer OS Muol Light' !important;
+.KHOSMoulLight {
+	font-family: 'Arial Black', 'Khmer OS Muol Light' !important;
 }
-.sign_box{
+.sign_box {
 	height: 70px;
 }
-.sign_box img{
+.sign_box img {
 	width: 180px;
 	margin-top: 15px;
 }
-.color_red{
+.color_red {
 	color: red;
 }
-.color_green{
+.color_green {
 	color: green !important;
 }
-.color_#0070C0{
-	color: #0070C0 !important;
+.color_#0070C0 {
+	color: #0070c0 !important;
 }
-.color_light_#0070C0{
-	color: #0070C0 !important;
+.color_light_#0070C0 {
+	color: #0070c0 !important;
 }
 
-
-.labor-print .test_labor td{
+.labor-print .test_labor td {
 	padding: 0 !important;
 	font-size: 13px;
 }
 
 /* Blood Test Labor */
-.blood-test *{
+.blood-test * {
 	font-size: 14px;
-	color: #0070C0;
-	font-family: 'Times New Roman','Khmer OS Siemreap', 'Wingdings 2';
+	color: #0070c0;
+	font-family: 'Times New Roman', 'Khmer OS Siemreap', 'Wingdings 2';
 }
 
-table { page-break-inside:auto!important; }
-tr { page-break-inside:avoid!important; page-break-after:auto!important; }
-table thead { display: table-row-group!important; }
-table tfoot { display: table-row-group!important; }
+table {
+	page-break-inside: auto !important;
+}
+tr {
+	page-break-inside: avoid !important;
+	page-break-after: auto !important;
+}
+table thead {
+	display: table-row-group !important;
+}
+table tfoot {
+	display: table-row-group !important;
+}
 
-.color_#0070C0{
-	color: #0070C0 !important;
+.color_#0070C0 {
+	color: #0070c0 !important;
 	-webkit-print-color-adjust: exact !important;
 	-moz-print-color-adjust: exact !important;
 	-o-print-color-adjust: exact !important;
 }
 
-.color_light_#0070C0{
-	color: #0070C0 !important;
+.color_light_#0070C0 {
+	color: #0070c0 !important;
 	-webkit-print-color-adjust: exact !important;
 	-moz-print-color-adjust: exact !important;
 	-o-print-color-adjust: exact !important;
 }
-.color_red{
+.color_red {
 	color: red !important;
 	-webkit-print-color-adjust: exact !important;
 	-moz-print-color-adjust: exact !important;
 	-o-print-color-adjust: exact !important;
 }
-.color_green{
+.color_green {
 	color: green !important;
 	-webkit-print-color-adjust: exact !important;
 	-moz-print-color-adjust: exact !important;
@@ -206,7 +243,6 @@ table tfoot { display: table-row-group!important; }
 }
 
 @media print {
-
 	@page {
 		size: 21cm 29.7cm;
 		margin: 0;
@@ -215,8 +251,8 @@ table tfoot { display: table-row-group!important; }
 	.eye_examination-print *,
 	.labor-print *,
 	.invoice-print *,
-	.prescription-print *{
-		color: #0070C0 !important;
+	.prescription-print * {
+		color: #0070c0 !important;
 		-webkit-print-color-adjust: exact !important;
 		-moz-print-color-adjust: exact !important;
 		-o-print-color-adjust: exact !important;
@@ -225,7 +261,7 @@ table tfoot { display: table-row-group!important; }
 	.eye_examination-print,
 	.labor-print,
 	.invoice-print,
-	.prescription-print{
+	.prescription-print {
 		width: 21cm;
 		height: 29.7cm;
 		display: block;
@@ -234,32 +270,32 @@ table tfoot { display: table-row-group!important; }
 		border: none;
 	}
 
-	.color_#0070C0{
-		color: #0070C0 !important;
+	.color_#0070C0 {
+		color: #0070c0 !important;
 		-webkit-print-color-adjust: exact !important;
 		-moz-print-color-adjust: exact !important;
 		-o-print-color-adjust: exact !important;
 	}
 
-	.color_light_#0070C0{
-		color: #0070C0 !important;
+	.color_light_#0070C0 {
+		color: #0070c0 !important;
 		-webkit-print-color-adjust: exact !important;
 		-moz-print-color-adjust: exact !important;
 		-o-print-color-adjust: exact !important;
 	}
-	.color_red{
+	.color_red {
 		color: red !important;
 		-webkit-print-color-adjust: exact !important;
 		-moz-print-color-adjust: exact !important;
 		-o-print-color-adjust: exact !important;
 	}
-	.color_red div span{
+	.color_red div span {
 		color: red !important;
 		-webkit-print-color-adjust: exact !important;
 		-moz-print-color-adjust: exact !important;
 		-o-print-color-adjust: exact !important;
 	}
-	.color_green{
+	.color_green {
 		color: green !important;
 		-webkit-print-color-adjust: exact !important;
 		-moz-print-color-adjust: exact !important;

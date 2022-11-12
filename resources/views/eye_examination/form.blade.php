@@ -31,28 +31,28 @@
 						<tr>
 							<td class="text-right bg-light-gray">{!! Html::decode(Form::label('initial_iop_re', __('label.form.eye_examination.plain_eye'))) !!}</td>
 							<td>
-								{!! Form::text('plain_eye_vare', ((isset($eye_examination->plain_eye_vare))? $eye_examination->plain_eye_vare : '' ), ['class' => 'form-control'. (($errors->has("plain_eye_vare"))? "is-invalid" : ""), 'autocomplete' => 'off']) !!}
+								{!! Form::select('plain_eye_vare', $eye_sign_range, ($eye_examination->plain_eye_vare ?? ''), ['class' => 'form-control custom-select']) !!}
 							</td>
 							<td>
-								{!! Form::text('plain_eye_vale', ((isset($eye_examination->plain_eye_vale))? $eye_examination->plain_eye_vale : '' ), ['class' => 'form-control'. (($errors->has("plain_eye_vale"))? "is-invalid" : ""), 'autocomplete' => 'off']) !!}
+								{!! Form::select('plain_eye_vale', $eye_sign_range, ($eye_examination->plain_eye_vale ?? ''), ['class' => 'form-control custom-select']) !!}
 							</td>
 						</tr>
 						<tr>
 							<td class="text-right bg-light-gray">{!! Html::decode(Form::label('initial_iop_re', __('label.form.eye_examination.with_ph'))) !!}</td>
 							<td>
-								{!! Form::text('with_ph_vare', ((isset($eye_examination->with_ph_vare))? $eye_examination->with_ph_vare : '' ), ['class' => 'form-control'. (($errors->has("with_ph_vare"))? "is-invalid" : ""), 'autocomplete' => 'off']) !!}
+								{!! Form::select('with_ph_vare', $eye_sign_range, ($eye_examination->with_ph_vare ?? ''), ['class' => 'form-control custom-select']) !!}
 							</td>
 							<td>
-								{!! Form::text('with_ph_vale', ((isset($eye_examination->with_ph_vale))? $eye_examination->with_ph_vale : '' ), ['class' => 'form-control'. (($errors->has("with_ph_vale"))? "is-invalid" : ""), 'autocomplete' => 'off']) !!}
+								{!! Form::select('with_ph_vale', $eye_sign_range, ($eye_examination->with_ph_vale ?? ''), ['class' => 'form-control custom-select']) !!}
 							</td>
 						</tr>
 						<tr>
 							<td class="text-right bg-light-gray">{!! Html::decode(Form::label('initial_iop_re', __('label.form.eye_examination.with_glasses'))) !!}</td>
 							<td>
-								{!! Form::text('with_glasses_vare', ((isset($eye_examination->with_glasses_vare))? $eye_examination->with_glasses_vare : '' ), ['class' => 'form-control'. (($errors->has("with_glasses_vare"))? "is-invalid" : ""), 'autocomplete' => 'off']) !!}
+								{!! Form::select('with_glasses_vare', $eye_sign_range, ($eye_examination->with_glasses_vare ?? ''), ['class' => 'form-control custom-select']) !!}
 							</td>
 							<td>
-								{!! Form::text('with_glasses_vale', ((isset($eye_examination->with_glasses_vale))? $eye_examination->with_glasses_vale : '' ), ['class' => 'form-control'. (($errors->has("with_glasses_vale"))? "is-invalid" : ""), 'autocomplete' => 'off']) !!}
+								{!! Form::select('with_glasses_vale', $eye_sign_range, ($eye_examination->with_glasses_vale ?? ''), ['class' => 'form-control custom-select']) !!}
 							</td>
 						</tr>
 					</tbody>
@@ -69,17 +69,6 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td class="text-right bg-light-gray">{!! Html::decode(Form::label('orbit_re', __('label.form.eye_examination.orbit'))) !!}</td>
-							<td>
-								{!! Form::text('orbit_re', ((isset($pre_select_obj->orbit_re))? $pre_select_obj->orbit_re : '' ), ['class' => 'form-control '. (($errors->has("orbit_re"))? "is-invalid" : "")]) !!}
-								{!! $errors->first('orbit_re', '<div class="invalid-feedback">:message</div>') !!}
-							</td>
-							<td>
-								{!! Form::text('orbit_le', ((isset($pre_select_obj->orbit_le))? $pre_select_obj->orbit_le : '' ), ['class' => 'form-control '. (($errors->has("orbit_le"))? "is-invalid" : "")]) !!}
-								{!! $errors->first('orbit_le', '<div class="invalid-feedback">:message</div>') !!}
-							</td>
-						</tr>
 						<tr>
 							<td class="text-right bg-light-gray">{!! Html::decode(Form::label('initial_iop_re', __('label.form.eye_examination.initial_iop'))) !!}</td>
 							<td>
@@ -101,6 +90,18 @@
 							<td>
 								{!! Form::text('primary_diagnosis_le', ((isset($pre_select_obj->primary_diagnosis_le))? $pre_select_obj->primary_diagnosis_le : '' ), ['class' => 'form-control '. (($errors->has("primary_diagnosis_le"))? "is-invalid" : "")]) !!}
 								{!! $errors->first('primary_diagnosis_le', '<div class="invalid-feedback">:message</div>') !!}
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="text-right bg-light-gray">{!! Html::decode(Form::label('orbit_re', __('label.form.eye_examination.orbit'))) !!}</td>
+							<td>
+								{!! Form::text('orbit_re', ((isset($pre_select_obj->orbit_re))? $pre_select_obj->orbit_re : '' ), ['class' => 'form-control '. (($errors->has("orbit_re"))? "is-invalid" : "")]) !!}
+								{!! $errors->first('orbit_re', '<div class="invalid-feedback">:message</div>') !!}
+							</td>
+							<td>
+								{!! Form::text('orbit_le', ((isset($pre_select_obj->orbit_le))? $pre_select_obj->orbit_le : '' ), ['class' => 'form-control '. (($errors->has("orbit_le"))? "is-invalid" : "")]) !!}
+								{!! $errors->first('orbit_le', '<div class="invalid-feedback">:message</div>') !!}
 							</td>
 						</tr>
 

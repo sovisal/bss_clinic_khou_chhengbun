@@ -38,7 +38,7 @@ class EyeExaminationRepository
 		$tbody = '';
 		$eye_examination = EyeExamination::find($id);
 
-		$title = 'EyeExamination (EE'. date('Y', strtotime($eye_examination->date)) .'-'.str_pad($eye_examination->id, 6, "0", STR_PAD_LEFT) .')';
+		$title = 'EyeExamination (EE' . date('Y', strtotime($eye_examination->date)) . '-' . str_pad($eye_examination->id, 6, "0", STR_PAD_LEFT) . ')';
 
 		$eye_examination_detail = '<section class="eye_examination-print" style="position: relative;">
 			' . $GlobalComponent->PrintHeader('eye_examination', $eye_examination) . '
@@ -53,18 +53,18 @@ class EyeExaminationRepository
 					<tbody>
 						<tr>
 							<td class="text-center">Plain Eye</td>
-							<td>'. $eye_examination->plain_eye_vare .'</td>
-							<td>'. $eye_examination->plain_eye_vale .'</td>
+							<td>' . $eye_examination->plain_eye_vare . '</td>
+							<td>' . $eye_examination->plain_eye_vale . '</td>
 						</tr>
 						<tr>
 							<td class="text-center">With PH</td>
-							<td>'. $eye_examination->with_ph_vare .'</td>
-							<td>'. $eye_examination->with_ph_vale  .'</td>
+							<td>' . $eye_examination->with_ph_vare . '</td>
+							<td>' . $eye_examination->with_ph_vale  . '</td>
 						</tr>
 						<tr>
 							<td class="text-center">With Glasses</td>
-							<td>'. $eye_examination->with_glasses_vare .'</td>
-							<td>'. $eye_examination->with_glasses_vale .'</td>
+							<td>' . $eye_examination->with_glasses_vare . '</td>
+							<td>' . $eye_examination->with_glasses_vale . '</td>
 						</tr>
 					</tbody>
 				</table>
@@ -72,15 +72,15 @@ class EyeExaminationRepository
 					<tbody>
 						<tr>
 							<td width="24%">Initial IOP</td>
-							<td width="38%"><b>RE: </b> '. $eye_examination->plain_eye_vare .'</td>
-							<td width="38%"><b>LE: </b> '. $eye_examination->plain_eye_vare .'</td>
+							<td width="38%"><b>RE: </b> ' . $eye_examination->plain_eye_vare . '</td>
+							<td width="38%"><b>LE: </b> ' . $eye_examination->plain_eye_vare . '</td>
 						</tr>
 						<tr>
 							<td rowspan="2">Primary Diagnosis</td>
-							<td colspan="2"><b>RE: </b> '. $eye_examination->primary_diagnosis_re .'</td>
+							<td colspan="2"><b>RE: </b> ' . $eye_examination->primary_diagnosis_re . '</td>
 						</tr>
 						<tr>
-							<td colspan="2"><b>LE: </b> '. $eye_examination->primary_diagnosis_le .'</td>
+							<td colspan="2"><b>LE: </b> ' . $eye_examination->primary_diagnosis_le . '</td>
 						</tr>
 					</tbody>
 				</table>
@@ -94,78 +94,75 @@ class EyeExaminationRepository
 						</tr>
 						<tr>
 							<td class="text-right">Uper Lide</td>
-							<td class="text-center">'. (($eye_examination->image_uper_lide_re!='')? '<img src="/images/eye_examinations/'. $eye_examination->image_uper_lide_re .'" alt="...">' : '') .'</td>
+							<td class="text-center">' . (($eye_examination->image_uper_lide_re != '') ? '<img src="/images/eye_examinations/' . $eye_examination->image_uper_lide_re . '" alt="...">' : '') . '</td>
 							<td class="text-right">Uper Lide</td>
-							<td class="text-center">'. (($eye_examination->image_uper_lide_le!='')? '<img src="/images/eye_examinations/'. $eye_examination->image_uper_lide_le .'" alt="...">' : '') .'</td>
+							<td class="text-center">' . (($eye_examination->image_uper_lide_le != '') ? '<img src="/images/eye_examinations/' . $eye_examination->image_uper_lide_le . '" alt="...">' : '') . '</td>
 						</tr>
 						<tr>
 							<td class="text-right">Eye Boll</td>
-							<td class="text-center">'. (($eye_examination->image_eye_boll_re!='')? '<img src="/images/eye_examinations/'. $eye_examination->image_eye_boll_re .'" alt="...">' : '') .'</td>
+							<td class="text-center">' . (($eye_examination->image_eye_boll_re != '') ? '<img src="/images/eye_examinations/' . $eye_examination->image_eye_boll_re . '" alt="...">' : '') . '</td>
 							<td class="text-right">Eye Boll</td>
-							<td class="text-center">'. (($eye_examination->image_eye_boll_le!='')? '<img src="/images/eye_examinations/'. $eye_examination->image_eye_boll_le .'" alt="...">' : '') .'</td>
+							<td class="text-center">' . (($eye_examination->image_eye_boll_le != '') ? '<img src="/images/eye_examinations/' . $eye_examination->image_eye_boll_le . '" alt="...">' : '') . '</td>
 						</tr>
 						<tr>
 							<td class="text-right">Locver lide</td>
-							<td class="text-center">'. (($eye_examination->image_locver_lide_re!='')? '<img src="/images/eye_examinations/'. $eye_examination->image_locver_lide_re .'" alt="...">' : '') .'</td>
+							<td class="text-center">' . (($eye_examination->image_locver_lide_re != '') ? '<img src="/images/eye_examinations/' . $eye_examination->image_locver_lide_re . '" alt="...">' : '') . '</td>
 							<td class="text-right">Locver lide</td>
-							<td class="text-center">'. (($eye_examination->image_locver_lide_le!='')? '<img src="/images/eye_examinations/'. $eye_examination->image_locver_lide_le .'" alt="...">' : '') .'</td>
+							<td class="text-center">' . (($eye_examination->image_locver_lide_le != '') ? '<img src="/images/eye_examinations/' . $eye_examination->image_locver_lide_le . '" alt="...">' : '') . '</td>
 						</tr>
 					</tbody>
 				</table>
-				<table class="table-info-2">
+				<table class="table-info-3">
 					<tbody>
 						<tr>
-							<td width="20%">- Orbit</td>
-							<td width="30%">'. $eye_examination->orbit_re .'</td>
-							<td width="30%">'. $eye_examination->orbit_le .'</td>
+							<td width="35%">' . $eye_examination->orbit_re . '</td>
+							<td width="30%"><span>Orbit</span></td>
+							<td width="35%">' . $eye_examination->orbit_le . '</td>
 						</tr>
 						<tr>
-							<td>- Ocular Movem</td>
-							<td>'. $eye_examination->ocular_movem_re .'</td>
-							<td>'. $eye_examination->ocular_movem_le .'</td>
+							<td>' . $eye_examination->ocular_movem_re . '</td>
+							<td><span>Ocular Movem</span></td>
+							<td>' . $eye_examination->ocular_movem_le . '</td>
 						</tr>
 						<tr>
-							<td>- Eyelid/lash</td>
-							<td>'. $eye_examination->eyelid_las_re .'</td>
-							<td>'. $eye_examination->eyelid_las_le .'</td>
+							<td>' . $eye_examination->eyelid_las_re . '</td>
+							<td><span>Eyelid/lash</span></td>
+							<td>' . $eye_examination->eyelid_las_le . '</td>
 						</tr>
 						<tr>
-							<td>- Conjunctiva</td>
-							<td>'. $eye_examination->conjunctiva_re .'</td>
-							<td>'. $eye_examination->conjunctiva_le .'</td>
+							<td>' . $eye_examination->conjunctiva_re . '</td>
+							<td><span>Conjunctiva</span></td>
+							<td>' . $eye_examination->conjunctiva_le . '</td>
 						</tr>
 						<tr>
-							<td>- Cornea</td>
-							<td>'. $eye_examination->cornea_re .'</td>
-							<td>'. $eye_examination->cornea_le .'</td>
+							<td>' . $eye_examination->cornea_re . '</td>
+							<td><span>Cornea</span></td>
+							<td>' . $eye_examination->cornea_le . '</td>
 						</tr>
 						<tr>
-							<td>- AC</td>
-							<td>'. $eye_examination->ac_re .'</td>
-							<td>'. $eye_examination->ac_le .'</td>
+							<td>' . $eye_examination->ac_re . '</td>
+							<td><span>AC</span></td>
+							<td>' . $eye_examination->ac_le . '</td>
 						</tr>
 						<tr>
-							<td>- Lris/Pupil</td>
-							<td>'. $eye_examination->lris_pupil_re .'</td>
-							<td>'. $eye_examination->lris_pupil_le .'</td>
+							<td>' . $eye_examination->lris_pupil_re . '</td>
+							<td><span>Lris/Pupil</span></td>
+							<td>' . $eye_examination->lris_pupil_le . '</td>
 						</tr>
 						<tr>
-							<td>- Lens</td>
-							<td>'. $eye_examination->lens_re .'</td>
-							<td>'. $eye_examination->lens_le .'</td>
+							<td>' . $eye_examination->lens_re . '</td>
+							<td><span>Lens</span></td>
+							<td>' . $eye_examination->lens_le . '</td>
 						</tr>
 						<tr>
-							<td>- Retinal Reflex</td>
-							<td>'. $eye_examination->retinal_reflex_re .'</td>
-							<td>'. $eye_examination->retinal_reflex_le .'</td>
+							<td>' . $eye_examination->retinal_reflex_re . '</td>
+							<td><span>Retinal Reflex</span></td>
+							<td>' . $eye_examination->retinal_reflex_le . '</td>
 						</tr>
 					</tbody>
 				</table>
 				<br/>
 				' . $GlobalComponent->FooterComeBackText('សូមយកវេជ្ជបញ្ជានេះមកវិញពេលមកពិនិត្យលើកក្រោយ') . '
-				<table class="table-footer" width="100%">
-				' . $GlobalComponent->DoctorSignature() . '
-				</table>
 			</section>';
 		return response()->json(['eye_examination_detail' => $eye_examination_detail, 'title' => $title]);
 		// return $eye_examination_detail;
@@ -211,41 +208,41 @@ class EyeExaminationRepository
 
 		if ($request->file('image_uper_lide_re')) {
 			$image_uper_lide_re = $request->file('image_uper_lide_re');
-			$eye_examination_image_uper_lide_re = time() .'_image_uper_lide_re_'. $eye_examination->id .'.png';
-			Image::make($image_uper_lide_re->getRealPath())->save($path.$eye_examination_image_uper_lide_re);
-			$eye_examination->update(['image_uper_lide_re'=>$eye_examination_image_uper_lide_re]);
+			$eye_examination_image_uper_lide_re = time() . '_image_uper_lide_re_' . $eye_examination->id . '.png';
+			Image::make($image_uper_lide_re->getRealPath())->save($path . $eye_examination_image_uper_lide_re);
+			$eye_examination->update(['image_uper_lide_re' => $eye_examination_image_uper_lide_re]);
 		}
 		if ($request->file('image_uper_lide_le')) {
 			$image_uper_lide_le = $request->file('image_uper_lide_le');
-			$eye_examination_image_uper_lide_le = time() .'_image_uper_lide_le_'. $eye_examination->id .'.png';
-			Image::make($image_uper_lide_le->getRealPath())->save($path.$eye_examination_image_uper_lide_le);
-			$eye_examination->update(['image_uper_lide_le'=>$eye_examination_image_uper_lide_le]);
+			$eye_examination_image_uper_lide_le = time() . '_image_uper_lide_le_' . $eye_examination->id . '.png';
+			Image::make($image_uper_lide_le->getRealPath())->save($path . $eye_examination_image_uper_lide_le);
+			$eye_examination->update(['image_uper_lide_le' => $eye_examination_image_uper_lide_le]);
 		}
 
 		if ($request->file('image_eye_boll_re')) {
 			$image_eye_boll_re = $request->file('image_eye_boll_re');
-			$eye_examination_image_eye_boll_re = time() .'_image_eye_boll_re_'. $eye_examination->id .'.png';
-			Image::make($image_eye_boll_re->getRealPath())->save($path.$eye_examination_image_eye_boll_re);
-			$eye_examination->update(['image_eye_boll_re'=>$eye_examination_image_eye_boll_re]);
+			$eye_examination_image_eye_boll_re = time() . '_image_eye_boll_re_' . $eye_examination->id . '.png';
+			Image::make($image_eye_boll_re->getRealPath())->save($path . $eye_examination_image_eye_boll_re);
+			$eye_examination->update(['image_eye_boll_re' => $eye_examination_image_eye_boll_re]);
 		}
 		if ($request->file('image_eye_boll_le')) {
 			$image_eye_boll_le = $request->file('image_eye_boll_le');
-			$eye_examination_image_eye_boll_le = time() .'_image_eye_boll_le_'. $eye_examination->id .'.png';
-			Image::make($image_eye_boll_le->getRealPath())->save($path.$eye_examination_image_eye_boll_le);
-			$eye_examination->update(['image_eye_boll_le'=>$eye_examination_image_eye_boll_le]);
+			$eye_examination_image_eye_boll_le = time() . '_image_eye_boll_le_' . $eye_examination->id . '.png';
+			Image::make($image_eye_boll_le->getRealPath())->save($path . $eye_examination_image_eye_boll_le);
+			$eye_examination->update(['image_eye_boll_le' => $eye_examination_image_eye_boll_le]);
 		}
 
 		if ($request->file('image_locver_lide_re')) {
 			$image_locver_lide_re = $request->file('image_locver_lide_re');
-			$eye_examination_image_locver_lide_re = time() .'_image_locver_lide_re_'. $eye_examination->id .'.png';
-			Image::make($image_locver_lide_re->getRealPath())->save($path.$eye_examination_image_locver_lide_re);
-			$eye_examination->update(['image_locver_lide_re'=>$eye_examination_image_locver_lide_re]);
+			$eye_examination_image_locver_lide_re = time() . '_image_locver_lide_re_' . $eye_examination->id . '.png';
+			Image::make($image_locver_lide_re->getRealPath())->save($path . $eye_examination_image_locver_lide_re);
+			$eye_examination->update(['image_locver_lide_re' => $eye_examination_image_locver_lide_re]);
 		}
 		if ($request->file('image_locver_lide_le')) {
 			$image_locver_lide_le = $request->file('image_locver_lide_le');
-			$eye_examination_image_uper_lide_re = time() .'_image_locver_lide_le_'. $eye_examination->id .'.png';
-			Image::make($image_locver_lide_le->getRealPath())->save($path.$eye_examination_image_uper_lide_re);
-			$eye_examination->update(['image_locver_lide_le'=>$eye_examination_image_uper_lide_re]);
+			$eye_examination_image_uper_lide_re = time() . '_image_locver_lide_le_' . $eye_examination->id . '.png';
+			Image::make($image_locver_lide_le->getRealPath())->save($path . $eye_examination_image_uper_lide_re);
+			$eye_examination->update(['image_locver_lide_le' => $eye_examination_image_uper_lide_re]);
 		}
 
 		return $eye_examination;
@@ -288,41 +285,41 @@ class EyeExaminationRepository
 
 		if ($request->file('image_uper_lide_re')) {
 			$image_uper_lide_re = $request->file('image_uper_lide_re');
-			$eye_examination_image_uper_lide_re = (($eye_examination->image_uper_lide_re!='')? $eye_examination->image_uper_lide_re : time() .'_image_uper_lide_re_'. $eye_examination->id .'.png');
+			$eye_examination_image_uper_lide_re = (($eye_examination->image_uper_lide_re != '') ? $eye_examination->image_uper_lide_re : time() . '_image_uper_lide_re_' . $eye_examination->id . '.png');
 			Image::make($image_uper_lide_re->getRealPath())->save($path . $eye_examination_image_uper_lide_re);
-			$eye_examination->update(['image_uper_lide_re'=>$eye_examination_image_uper_lide_re]);
+			$eye_examination->update(['image_uper_lide_re' => $eye_examination_image_uper_lide_re]);
 		}
 		if ($request->file('image_uper_lide_le')) {
 			$image_uper_lide_le = $request->file('image_uper_lide_le');
-			$eye_examination_image_uper_lide_le = (($eye_examination->image_uper_lide_le!='')? $eye_examination->image_uper_lide_le : time() .'_image_uper_lide_le_'. $eye_examination->id .'.png');
+			$eye_examination_image_uper_lide_le = (($eye_examination->image_uper_lide_le != '') ? $eye_examination->image_uper_lide_le : time() . '_image_uper_lide_le_' . $eye_examination->id . '.png');
 			Image::make($image_uper_lide_le->getRealPath())->save($path . $eye_examination_image_uper_lide_le);
-			$eye_examination->update(['image_uper_lide_le'=>$eye_examination_image_uper_lide_le]);
+			$eye_examination->update(['image_uper_lide_le' => $eye_examination_image_uper_lide_le]);
 		}
 
 		if ($request->file('image_eye_boll_re')) {
 			$image_eye_boll_re = $request->file('image_eye_boll_re');
-			$eye_examination_image_eye_boll_re = (($eye_examination->image_eye_boll_re!='')? $eye_examination->image_eye_boll_re : time() .'_image_eye_boll_re_'. $eye_examination->id .'.png');
+			$eye_examination_image_eye_boll_re = (($eye_examination->image_eye_boll_re != '') ? $eye_examination->image_eye_boll_re : time() . '_image_eye_boll_re_' . $eye_examination->id . '.png');
 			Image::make($image_eye_boll_re->getRealPath())->save($path . $eye_examination_image_eye_boll_re);
-			$eye_examination->update(['image_eye_boll_re'=>$eye_examination_image_eye_boll_re]);
+			$eye_examination->update(['image_eye_boll_re' => $eye_examination_image_eye_boll_re]);
 		}
 		if ($request->file('image_eye_boll_le')) {
 			$image_eye_boll_le = $request->file('image_eye_boll_le');
-			$eye_examination_image_eye_boll_le = (($eye_examination->image_eye_boll_le!='')? $eye_examination->image_eye_boll_le : time() .'_image_eye_boll_le_'. $eye_examination->id .'.png');
+			$eye_examination_image_eye_boll_le = (($eye_examination->image_eye_boll_le != '') ? $eye_examination->image_eye_boll_le : time() . '_image_eye_boll_le_' . $eye_examination->id . '.png');
 			Image::make($image_eye_boll_le->getRealPath())->save($path . $eye_examination_image_eye_boll_le);
-			$eye_examination->update(['image_eye_boll_le'=>$eye_examination_image_eye_boll_le]);
+			$eye_examination->update(['image_eye_boll_le' => $eye_examination_image_eye_boll_le]);
 		}
 
 		if ($request->file('image_locver_lide_re')) {
 			$image_locver_lide_re = $request->file('image_locver_lide_re');
-			$eye_examination_image_locver_lide_re = (($eye_examination->image_locver_lide_re!='')? $eye_examination->image_locver_lide_re : time() .'_image_locver_lide_re_'. $eye_examination->id .'.png');
+			$eye_examination_image_locver_lide_re = (($eye_examination->image_locver_lide_re != '') ? $eye_examination->image_locver_lide_re : time() . '_image_locver_lide_re_' . $eye_examination->id . '.png');
 			Image::make($image_locver_lide_re->getRealPath())->save($path . $eye_examination_image_locver_lide_re);
-			$eye_examination->update(['image_locver_lide_re'=>$eye_examination_image_locver_lide_re]);
+			$eye_examination->update(['image_locver_lide_re' => $eye_examination_image_locver_lide_re]);
 		}
 		if ($request->file('image_locver_lide_le')) {
 			$image_locver_lide_le = $request->file('image_locver_lide_le');
-			$eye_examination_image_locver_lide_le = (($eye_examination->image_locver_lide_le!='')? $eye_examination->image_locver_lide_le : time() .'_image_locver_lide_le_'. $eye_examination->id .'.png');
+			$eye_examination_image_locver_lide_le = (($eye_examination->image_locver_lide_le != '') ? $eye_examination->image_locver_lide_le : time() . '_image_locver_lide_le_' . $eye_examination->id . '.png');
 			Image::make($image_locver_lide_le->getRealPath())->save($path . $eye_examination_image_locver_lide_le);
-			$eye_examination->update(['image_locver_lide_le'=>$eye_examination_image_locver_lide_le]);
+			$eye_examination->update(['image_locver_lide_le' => $eye_examination_image_locver_lide_le]);
 		}
 
 		return $eye_examination;
@@ -330,36 +327,36 @@ class EyeExaminationRepository
 
 	public function destroy($request, $eye_examination, $path)
 	{
-		if (Hash::check($request->passwordDelete, Auth::user()->password)){
+		if (Hash::check($request->passwordDelete, Auth::user()->password)) {
 			$id = $eye_examination->id;
-			if($eye_examination->delete()){
-				if ($eye_examination->image_uper_lide_re!='default.png') {
+			if ($eye_examination->delete()) {
+				if ($eye_examination->image_uper_lide_re != 'default.png') {
 					File::deleteDirectory($path . $eye_examination->image_uper_lide_re);
 				}
 
-				if ($eye_examination->image_uper_lide_le!='default.png') {
+				if ($eye_examination->image_uper_lide_le != 'default.png') {
 					File::deleteDirectory($path . $eye_examination->image_uper_lide_le);
 				}
 
-				if ($eye_examination->image_eye_boll_re!='default.png') {
+				if ($eye_examination->image_eye_boll_re != 'default.png') {
 					File::deleteDirectory($path . $eye_examination->image_eye_boll_re);
 				}
 
-				if ($eye_examination->image_eye_boll_le!='default.png') {
+				if ($eye_examination->image_eye_boll_le != 'default.png') {
 					File::deleteDirectory($path . $eye_examination->image_eye_boll_le);
 				}
 
-				if ($eye_examination->image_locver_lide_re!='default.png') {
+				if ($eye_examination->image_locver_lide_re != 'default.png') {
 					File::deleteDirectory($path . $eye_examination->image_locver_lide_re);
 				}
 
-				if ($eye_examination->image_locver_lide_le!='default.png') {
+				if ($eye_examination->image_locver_lide_le != 'default.png') {
 					File::deleteDirectory($path . $eye_examination->image_locver_lide_le);
 				}
 
 				return $id;
 			}
-		}else{
+		} else {
 			return false;
 		}
 	}
