@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Location;
 use App\Http\Controllers\Controller;
 use App\Models\FourLevelAddress;
 use Illuminate\Http\Request;
+use DB;
 
 class FourLevelAddressController extends Controller
 {
@@ -157,10 +158,8 @@ class FourLevelAddressController extends Controller
 		$_path_kh = $request->path_kh;
 		$_path_en = $request->path_en;
 
-		$province = FourLevelAddress::where('_code', $code)->first();
-		if ($province->update(compact('_name_kh', '_name_en', '_path_kh', '_path_en'))){
-			return redirect()->back()
-				->with('success', __('alert.crud.success.update',  ['name' => $_name_kh]) . $_name_kh . " :: " . $_name_en);
-		}
+		DB::statement('UPDATE addresses SET _name_kh="'. $_name_kh .'", _name_en="'. $_name_en .'", _path_kh="'. $_path_kh .'", _path_en="'.$_path_en.'" WHERE _code="' . $code . '"');
+		return redirect()->back()
+			->with('success', __('alert.crud.success.update',  ['name' => $_name_kh]) . $_name_kh . " :: " . $_name_en);
 	}
 }

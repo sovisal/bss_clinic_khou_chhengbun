@@ -7,7 +7,6 @@ use App\Models\BaseModel;
 class FourLevelAddress extends BaseModel
 {
 	public $timestamps = false;
-	protected $primaryKey = "_code";
 	protected $table = 'addresses';
 
 	protected $fillable = [
