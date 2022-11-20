@@ -67,12 +67,14 @@ class PatientRepository
 		$P_precription = \DB::table('prescriptions')->select(['id', 'pt_name', 'date', 'pt_age', 'pt_age_type'])->where('patient_id', $request->id)->orderBy('id', 'DESC')->get()->toarray();
 		$P_invoice = \DB::table('invoices')->select(['id', 'pt_name', 'date', 'pt_age', 'pt_age_type'])->where('patient_id', $request->id)->orderBy('id', 'DESC')->get()->toarray();
 		$P_echo = \DB::table('echoes')->select(['echoes.id', 'echoes.pt_name', 'echoes.date', 'echoes.pt_age', 'echo_default_descriptions.slug'])->leftJoin('echo_default_descriptions', 'echoes.echo_default_description_id', '=', 'echo_default_descriptions.id')->where('echoes.patient_id', $request->id)->orderBy('echoes.id', 'DESC')->get()->toarray();
-		$P_labor = \DB::table('labors')->select(['id', 'labor_type', 'pt_name', 'date'])->where('patient_id', $request->id)->orderBy('id', 'DESC')->get()->toarray();
+		$P_labor = \DB::table('labors')->select(['id', 'labor_type', 'pt_name', 'pt_age', 'date'])->where('patient_id', $request->id)->orderBy('id', 'DESC')->get()->toarray();
+		$P_eye_examination = \DB::table('eye_examinations')->select(['id', 'pt_name', 'date', 'pt_age'])->where('patient_id', $request->id)->orderBy('id', 'DESC')->get()->toarray();
 		$P_result = array_merge(
 			array_map(function ($P) { $P->segment = 'prescription'; $P->link = "prescription/{$P->id}/print"; $P->label_info = __("sidebar.prescription.main"); return $P; }, $P_precription), 
 			array_map(function ($P) { $P->segment = 'invoice'; $P->link = "invoice/{$P->id}/print"; $P->label_info = __("sidebar.invoice.main"); return $P; }, $P_invoice),
 			array_map(function ($P) { $P->segment = 'echo'; $P->link = "echoes/{$P->slug}/{$P->id}/print"; $P->label_info = __("sidebar.echo.main"); return $P; }, $P_echo),
-			array_map(function ($P) { $P->segment = 'labor'; $P->link = "labor/{$P->id}/print"; $P->label_info = __("sidebar.labor.main") . ($P->labor_type == 1 ? ' - ' . __("module.table.labor.create_label_1") : ($P->labor_type == 2 ? ' - ' . __("module.table.labor.create_label_2") : '')); return $P; }, $P_labor)
+			array_map(function ($P) { $P->segment = 'labor'; $P->link = "labor/{$P->id}/print"; $P->label_info = __("sidebar.labor.main") . ($P->labor_type == 1 ? ' - ' . __("module.table.labor.create_label_1") : ($P->labor_type == 2 ? ' - ' . __("module.table.labor.create_label_2") : '')); return $P; }, $P_labor),
+			array_map(function ($P) { $P->segment = 'eye_examination'; $P->link = "eye_examination/{$P->id}/print"; $P->label_info = __("sidebar.eye_examination.main"); return $P; }, $P_eye_examination)
 		);
 		array_multisort(array_column($P_result, 'date'), SORT_DESC, $P_result);
 
