@@ -11,7 +11,7 @@
 
 	<!-- Styles -->
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-	<link href="{{ asset('css/custom-style.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/custom-style.css?v=' . rand(1111, 9999)) }}" rel="stylesheet">
 	@yield('css')
 
 </head>
@@ -48,7 +48,7 @@
 
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}"></script>
-	<script src="{{ asset('js/custom-js.js') }}"></script>
+	<script src="{{ asset('js/custom-js.js?v=' . rand(1111, 9999)) }}"></script>
 	@yield('js')
 	<script src="{{ asset('js/global.js') }}"></script>
 </body>
