@@ -202,48 +202,14 @@ class EyeExaminationRepository
 			'lens_le' => $request->lens_le,
 			'retinal_reflex_re' => $request->retinal_reflex_re,
 			'retinal_reflex_le' => $request->retinal_reflex_le,
-			'created_by' => Auth::user()->id,
-			'updated_by' => Auth::user()->id,
+			'created_by' => auth()->user()->id,
+			'updated_by' => auth()->user()->id,
 		]));
 
-		if ($request->file('image_uper_lide_re')) {
-			$image_uper_lide_re = $request->file('image_uper_lide_re');
-			$eye_examination_image_uper_lide_re = time() . '_image_uper_lide_re_' . $eye_examination->id . '.png';
-			Image::make($image_uper_lide_re->getRealPath())->save($path . $eye_examination_image_uper_lide_re);
-			$eye_examination->update(['image_uper_lide_re' => $eye_examination_image_uper_lide_re]);
-		}
-		if ($request->file('image_uper_lide_le')) {
-			$image_uper_lide_le = $request->file('image_uper_lide_le');
-			$eye_examination_image_uper_lide_le = time() . '_image_uper_lide_le_' . $eye_examination->id . '.png';
-			Image::make($image_uper_lide_le->getRealPath())->save($path . $eye_examination_image_uper_lide_le);
-			$eye_examination->update(['image_uper_lide_le' => $eye_examination_image_uper_lide_le]);
-		}
-
-		if ($request->file('image_eye_boll_re')) {
-			$image_eye_boll_re = $request->file('image_eye_boll_re');
-			$eye_examination_image_eye_boll_re = time() . '_image_eye_boll_re_' . $eye_examination->id . '.png';
-			Image::make($image_eye_boll_re->getRealPath())->save($path . $eye_examination_image_eye_boll_re);
-			$eye_examination->update(['image_eye_boll_re' => $eye_examination_image_eye_boll_re]);
-		}
-		if ($request->file('image_eye_boll_le')) {
-			$image_eye_boll_le = $request->file('image_eye_boll_le');
-			$eye_examination_image_eye_boll_le = time() . '_image_eye_boll_le_' . $eye_examination->id . '.png';
-			Image::make($image_eye_boll_le->getRealPath())->save($path . $eye_examination_image_eye_boll_le);
-			$eye_examination->update(['image_eye_boll_le' => $eye_examination_image_eye_boll_le]);
-		}
-
-		if ($request->file('image_locver_lide_re')) {
-			$image_locver_lide_re = $request->file('image_locver_lide_re');
-			$eye_examination_image_locver_lide_re = time() . '_image_locver_lide_re_' . $eye_examination->id . '.png';
-			Image::make($image_locver_lide_re->getRealPath())->save($path . $eye_examination_image_locver_lide_re);
-			$eye_examination->update(['image_locver_lide_re' => $eye_examination_image_locver_lide_re]);
-		}
-		if ($request->file('image_locver_lide_le')) {
-			$image_locver_lide_le = $request->file('image_locver_lide_le');
-			$eye_examination_image_uper_lide_re = time() . '_image_locver_lide_le_' . $eye_examination->id . '.png';
-			Image::make($image_locver_lide_le->getRealPath())->save($path . $eye_examination_image_uper_lide_re);
-			$eye_examination->update(['image_locver_lide_le' => $eye_examination_image_uper_lide_re]);
-		}
+		// Save image to path
+		$images = $this->saveImage(['image_uper_lide_re', 'image_uper_lide_le', 'image_eye_boll_re', 'image_eye_boll_le', 'image_locver_lide_re', 'image_locver_lide_le'], $path, $eye_examination->id);
+		// Update iamge name on records
+		$eye_examination->update($images);
 
 		return $eye_examination;
 	}
@@ -280,84 +246,81 @@ class EyeExaminationRepository
 			'lens_le' => $request->lens_le,
 			'retinal_reflex_re' => $request->retinal_reflex_re,
 			'retinal_reflex_le' => $request->retinal_reflex_le,
-			'updated_by' => Auth::user()->id,
+			'updated_by' => auth()->user()->id,
 		]));
 
-		if ($request->file('image_uper_lide_re')) {
-			$image_uper_lide_re = $request->file('image_uper_lide_re');
-			$eye_examination_image_uper_lide_re = (($eye_examination->image_uper_lide_re != '') ? $eye_examination->image_uper_lide_re : time() . '_image_uper_lide_re_' . $eye_examination->id . '.png');
-			Image::make($image_uper_lide_re->getRealPath())->save($path . $eye_examination_image_uper_lide_re);
-			$eye_examination->update(['image_uper_lide_re' => $eye_examination_image_uper_lide_re]);
-		}
-		if ($request->file('image_uper_lide_le')) {
-			$image_uper_lide_le = $request->file('image_uper_lide_le');
-			$eye_examination_image_uper_lide_le = (($eye_examination->image_uper_lide_le != '') ? $eye_examination->image_uper_lide_le : time() . '_image_uper_lide_le_' . $eye_examination->id . '.png');
-			Image::make($image_uper_lide_le->getRealPath())->save($path . $eye_examination_image_uper_lide_le);
-			$eye_examination->update(['image_uper_lide_le' => $eye_examination_image_uper_lide_le]);
-		}
-
-		if ($request->file('image_eye_boll_re')) {
-			$image_eye_boll_re = $request->file('image_eye_boll_re');
-			$eye_examination_image_eye_boll_re = (($eye_examination->image_eye_boll_re != '') ? $eye_examination->image_eye_boll_re : time() . '_image_eye_boll_re_' . $eye_examination->id . '.png');
-			Image::make($image_eye_boll_re->getRealPath())->save($path . $eye_examination_image_eye_boll_re);
-			$eye_examination->update(['image_eye_boll_re' => $eye_examination_image_eye_boll_re]);
-		}
-		if ($request->file('image_eye_boll_le')) {
-			$image_eye_boll_le = $request->file('image_eye_boll_le');
-			$eye_examination_image_eye_boll_le = (($eye_examination->image_eye_boll_le != '') ? $eye_examination->image_eye_boll_le : time() . '_image_eye_boll_le_' . $eye_examination->id . '.png');
-			Image::make($image_eye_boll_le->getRealPath())->save($path . $eye_examination_image_eye_boll_le);
-			$eye_examination->update(['image_eye_boll_le' => $eye_examination_image_eye_boll_le]);
-		}
-
-		if ($request->file('image_locver_lide_re')) {
-			$image_locver_lide_re = $request->file('image_locver_lide_re');
-			$eye_examination_image_locver_lide_re = (($eye_examination->image_locver_lide_re != '') ? $eye_examination->image_locver_lide_re : time() . '_image_locver_lide_re_' . $eye_examination->id . '.png');
-			Image::make($image_locver_lide_re->getRealPath())->save($path . $eye_examination_image_locver_lide_re);
-			$eye_examination->update(['image_locver_lide_re' => $eye_examination_image_locver_lide_re]);
-		}
-		if ($request->file('image_locver_lide_le')) {
-			$image_locver_lide_le = $request->file('image_locver_lide_le');
-			$eye_examination_image_locver_lide_le = (($eye_examination->image_locver_lide_le != '') ? $eye_examination->image_locver_lide_le : time() . '_image_locver_lide_le_' . $eye_examination->id . '.png');
-			Image::make($image_locver_lide_le->getRealPath())->save($path . $eye_examination_image_locver_lide_le);
-			$eye_examination->update(['image_locver_lide_le' => $eye_examination_image_locver_lide_le]);
-		}
+		$i = 0;
+		$arr_img = [];
+		$arr_img[$eye_examination->image_uper_lide_re ?? $i++] = 'image_uper_lide_re';
+		$arr_img[$eye_examination->image_uper_lide_le ?? $i++] = 'image_uper_lide_le';
+		$arr_img[$eye_examination->image_eye_boll_re ?? $i++] = 'image_eye_boll_re';
+		$arr_img[$eye_examination->image_eye_boll_le ?? $i++] = 'image_eye_boll_le';
+		$arr_img[$eye_examination->image_locver_lide_re ?? $i++] = 'image_locver_lide_re';
+		$arr_img[$eye_examination->image_locver_lide_le ?? $i++] = 'image_locver_lide_le';
+		// Save image to path
+		$images = $this->saveImage($arr_img, $path, $eye_examination->id);
+		// Update iamge name on records
+		$eye_examination->update($images);
 
 		return $eye_examination;
 	}
 
 	public function destroy($request, $eye_examination, $path)
 	{
-		if (Hash::check($request->passwordDelete, Auth::user()->password)) {
+		if (Hash::check($request->passwordDelete, auth()->user()->password)) {
 			$id = $eye_examination->id;
 			if ($eye_examination->delete()) {
-				if ($eye_examination->image_uper_lide_re != 'default.png') {
-					File::deleteDirectory($path . $eye_examination->image_uper_lide_re);
-				}
-
-				if ($eye_examination->image_uper_lide_le != 'default.png') {
-					File::deleteDirectory($path . $eye_examination->image_uper_lide_le);
-				}
-
-				if ($eye_examination->image_eye_boll_re != 'default.png') {
-					File::deleteDirectory($path . $eye_examination->image_eye_boll_re);
-				}
-
-				if ($eye_examination->image_eye_boll_le != 'default.png') {
-					File::deleteDirectory($path . $eye_examination->image_eye_boll_le);
-				}
-
-				if ($eye_examination->image_locver_lide_re != 'default.png') {
-					File::deleteDirectory($path . $eye_examination->image_locver_lide_re);
-				}
-
-				if ($eye_examination->image_locver_lide_le != 'default.png') {
-					File::deleteDirectory($path . $eye_examination->image_locver_lide_le);
-				}
-
+				
+				// Delete Old image
+				$this->deleteImage($path . $eye_examination->image_uper_lide_re);
+				$this->deleteImage($path . $eye_examination->image_uper_lide_le);
+				$this->deleteImage($path . $eye_examination->image_eye_boll_re);
+				$this->deleteImage($path . $eye_examination->image_eye_boll_le);
+				$this->deleteImage($path . $eye_examination->image_locver_lide_re);
+				$this->deleteImage($path . $eye_examination->image_locver_lide_le);
 				return $id;
 			}
 		} else {
 			return false;
 		}
 	}
+
+	public function saveImage($arr_image, $path, $id)
+	{
+		$images = [];
+		foreach ($arr_image as $key => $req) {
+			if (request()->file($req)) {
+				// Get image from request
+				$img = request()->file($req);
+				// Generate image name
+				$eye_examination_img = time() . '_'. $req .'_' . $id . '.png';
+				// Init Intervention Image
+				$image = Image::make($img->getRealPath());
+				// Save Standard image to path
+				$image->resize(1000, null, function ($constraint) {
+					$constraint->aspectRatio();
+				});
+				$image->save($path . $eye_examination_img);
+
+				// Pass save image to array to update record
+				$images[$req] = $eye_examination_img;
+
+				// Delete Old image
+				$this->deleteImage($path . $key);
+			}
+		}
+		return $images;
+	}
+
+	public function deleteImage($path)
+	{
+		if(File::exists($path)){
+			File::delete($path);
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+
 }

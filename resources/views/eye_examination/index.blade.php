@@ -42,12 +42,12 @@
 				<thead>
 					<tr>
 						<th class="text-center" width="10%">{!! __('module.table.eye_examination.number') !!}</th>
-						<th class="text-center" width="10%">{!! __('module.table.date') !!}</th>
+						<th class="text-center" width="12%">{!! __('module.table.date') !!}</th>
 						<th class="text-center">{!! __('module.table.labor.pt_name') !!}</th>
-						<th class="text-center" width="10%">{!! __('module.table.labor.pt_phone') !!}</th>
+						<th class="text-center" width="13%">{!! __('module.table.labor.pt_phone') !!}</th>
 						<th class="text-center" width="10%">{!! __('module.table.labor.pt_age') !!}</th>
-						<th class="text-center" width="10%">{!! __('label.form.labor.pt_gender') !!}</th>
-						<th width="12%" class="text-center">{!! __('module.table.action') !!}</th>
+						<th class="text-center" width="10%">{!! __('module.table.labor.pt_gender') !!}</th>
+						<th width="18%" class="text-center">{!! __('module.table.action') !!}</th>
 					</tr>
 				</thead>
 				<tbody>
