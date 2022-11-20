@@ -9,11 +9,11 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'province', 'as' => 'province.', 'namespace' => 'Location'], function () {
 
 	Route::get('/', 'FourLevelAddressController@index')->name('index')->middleware('can:Province Index');
-	Route::get('/create', 'ProvinceController@create')->name('create')->middleware('can:Province Create');
-	Route::post('/store', 'ProvinceController@store')->name('store')->middleware('can:Province Create');
-	Route::get('/{province}/edit', 'ProvinceController@edit')->name('edit')->middleware('can:Province Edit');
-	Route::put('/{province}/update', 'ProvinceController@update')->name('update')->middleware('can:Province Edit');
-	Route::delete('/{province}/delete', 'ProvinceController@destroy')->name('destroy')->middleware('can:Province Delete');
+	Route::get('/create', 'FourLevelAddressController@create')->name('create')->middleware('can:Province Create');
+	Route::post('/store', 'FourLevelAddressController@store')->name('store')->middleware('can:Province Create');
+	Route::get('/{province}/edit', 'FourLevelAddressController@edit')->name('edit')->middleware('can:Province Edit');
+	Route::put('/{province}/update', 'FourLevelAddressController@update')->name('update')->middleware('can:Province Edit');
+	// Route::delete('/{province}/delete', 'ProvinceController@destroy')->name('destroy')->middleware('can:Province Delete');
 	
 	Route::post('/getSelectDistrict', 'ProvinceController@getSelectDistrict')->name('getSelectDistrict');
 });

@@ -13,7 +13,7 @@
 		
 		<div class="card-tools">
 			@can('Province Index')
-			<a href="{{route('province.index')}}" class="btn btn-danger btn-sm btn-flat"><i class="fa fa-table"></i> &nbsp;{{ __('label.buttons.back_to_list', [ 'name' => Auth::user()->module() ]) }}</a>
+			<a href="{{route('province.index')}}?addr={{ @$addr }}" class="btn btn-danger btn-sm btn-flat"><i class="fa fa-table"></i> &nbsp;{{ __('label.buttons.back_to_list', [ 'name' => Auth::user()->module() ]) }}</a>
 			@endcan
 		</div>
 
@@ -24,7 +24,7 @@
 	</div>
 
 
-	{!! Form::open(['url' => route('province.update', $province->id),'method' => 'post','class' => 'mt-3']) !!}
+	{!! Form::open(['url' => route('province.update', $province->_code),'method' => 'post','class' => 'mt-3']) !!}
 	{!! Form::hidden('_method', 'PUT') !!}
 
 	<div class="card-body">
