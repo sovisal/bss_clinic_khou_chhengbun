@@ -183,7 +183,7 @@ return [
 			'conjunctiva' => 'Conjunctiva',
 			'cornea' => 'Cornea',
 			'ac' => 'AC',
-			'lris_pupil' => 'Lris Pupil',
+			'lris_pupil' => 'Iris Pupil',
 			'lens' => 'Lens',
 			'retinal_reflex' => 'Retinal Reflex',
 			'plain_eye' => 'Plain eye',

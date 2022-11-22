@@ -147,7 +147,7 @@ class EyeExaminationRepository
 						</tr>
 						<tr>
 							<td>' . $eye_examination->lris_pupil_re . '</td>
-							<td><span>Lris/Pupil</span></td>
+							<td><span>Iris/Pupil</span></td>
 							<td>' . $eye_examination->lris_pupil_le . '</td>
 						</tr>
 						<tr>
