@@ -71,16 +71,17 @@ class EyeExaminationRepository
 				<table class="table-info-2">
 					<tbody>
 						<tr>
-							<td width="24%">Initial IOP</td>
-							<td width="38%"><b>RE: </b> ' . $eye_examination->initial_iop_re . '</td>
-							<td width="38%"><b>LE: </b> ' . $eye_examination->initial_iop_le . '</td>
+							<td width="25%">Initial IOP</td>
+							<td width="25%"><b>RE: </b> ' . $eye_examination->initial_iop_re . '</td>
+							<td width="25%"><b>LE: </b> ' . $eye_examination->initial_iop_le . '</td>
+							<td width="25%">Normal :(10-20)mmhg</td>
 						</tr>
 						<tr>
 							<td rowspan="2">Primary Diagnosis</td>
-							<td colspan="2"><b>RE: </b> ' . $eye_examination->primary_diagnosis_re . '</td>
+							<td colspan="3"><b>RE: </b> ' . $eye_examination->primary_diagnosis_re . '</td>
 						</tr>
 						<tr>
-							<td colspan="2"><b>LE: </b> ' . $eye_examination->primary_diagnosis_le . '</td>
+							<td colspan="3"><b>LE: </b> ' . $eye_examination->primary_diagnosis_le . '</td>
 						</tr>
 					</tbody>
 				</table>
