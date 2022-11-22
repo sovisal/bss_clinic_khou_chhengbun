@@ -227,7 +227,7 @@
 					<td class="text-center">
 						<div class="fileinput fileinput-new" data-provides="fileinput">
 							<div class="fileinput-new img-thumbnail" style="max-width: 100%;">
-								<img data-src="" src="/images/eye_examinations/{{ ((isset($eye_examination->image_uper_lide_re))? $eye_examination->image_uper_lide_re : 'default.png' ) }}" alt="...">
+								<img data-src="" src="{{ asset('images/eye_examinations/' . ((isset($eye_examination->image_uper_lide_re))? $eye_examination->image_uper_lide_re : 'default.png' )) }}" alt="...">
 							</div>
 							<div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 248px;"></div>
 							<div class="mt-2">
@@ -243,7 +243,7 @@
 					<td class="text-center">
 						<div class="fileinput fileinput-new" data-provides="fileinput">
 							<div class="fileinput-new img-thumbnail" style="max-width: 100%;">
-								<img data-src="" src="/images/eye_examinations/{{ ((isset($eye_examination->image_uper_lide_le))? $eye_examination->image_uper_lide_le : 'default.png' ) }}" alt="...">
+								<img data-src="" src="{{ asset('images/eye_examinations/' . ((isset($eye_examination->image_uper_lide_le))? $eye_examination->image_uper_lide_le : 'default.png' )) }}" alt="...">
 							</div>
 							<div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 248px;"></div>
 							<div class="mt-2">
@@ -263,7 +263,7 @@
 					<td class="text-center">
 						<div class="fileinput fileinput-new" data-provides="fileinput">
 							<div class="fileinput-new img-thumbnail" style="max-width: 100%;">
-								<img data-src="" src="/images/eye_examinations/{{ ((isset($eye_examination->image_eye_boll_re))? $eye_examination->image_eye_boll_re : 'default.png' ) }}" alt="...">
+								<img data-src="" src="{{ asset('images/eye_examinations/' . ((isset($eye_examination->image_eye_boll_re))? $eye_examination->image_eye_boll_re : 'default.png' )) }}" alt="...">
 							</div>
 							<div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 248px;"></div>
 							<div class="mt-2">
@@ -279,7 +279,7 @@
 					<td class="text-center">
 						<div class="fileinput fileinput-new" data-provides="fileinput">
 							<div class="fileinput-new img-thumbnail" style="max-width: 100%;">
-								<img data-src="" src="/images/eye_examinations/{{ ((isset($eye_examination->image_eye_boll_le))? $eye_examination->image_eye_boll_le : 'default.png' ) }}" alt="...">
+								<img data-src="" src="{{ asset('images/eye_examinations/' . ((isset($eye_examination->image_eye_boll_le))? $eye_examination->image_eye_boll_le : 'default.png' )) }}" alt="...">
 							</div>
 							<div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 248px;"></div>
 							<div class="mt-2">
@@ -299,7 +299,7 @@
 					<td class="text-center">
 						<div class="fileinput fileinput-new" data-provides="fileinput">
 							<div class="fileinput-new img-thumbnail" style="max-width: 100%;">
-								<img data-src="" src="/images/eye_examinations/{{ ((isset($eye_examination->image_locver_lide_re))? $eye_examination->image_locver_lide_re : 'default.png' ) }}" alt="...">
+								<img data-src="" src="{{ asset('images/eye_examinations/' . ((isset($eye_examination->image_locver_lide_re))? $eye_examination->image_locver_lide_re : 'default.png' )) }}" alt="...">
 							</div>
 							<div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 248px;"></div>
 							<div class="mt-2">
@@ -315,7 +315,7 @@
 					<td class="text-center">
 						<div class="fileinput fileinput-new" data-provides="fileinput">
 							<div class="fileinput-new img-thumbnail" style="max-width: 100%;">
-								<img data-src="" src="/images/eye_examinations/{{ ((isset($eye_examination->image_locver_lide_le))? $eye_examination->image_locver_lide_le : 'default.png' ) }}" alt="...">
+								<img data-src="" src="{{ asset('images/eye_examinations/' . ((isset($eye_examination->image_locver_lide_le))? $eye_examination->image_locver_lide_le : 'default.png' )) }}" alt="...">
 							</div>
 							<div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 248px;"></div>
 							<div class="mt-2">

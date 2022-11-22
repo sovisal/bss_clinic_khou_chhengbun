@@ -94,21 +94,21 @@ class EyeExaminationRepository
 						</tr>
 						<tr>
 							<td class="text-right">Uper Lide</td>
-							<td class="text-center">' . (($eye_examination->image_uper_lide_re != '') ? '<img src="/images/eye_examinations/' . $eye_examination->image_uper_lide_re . '" alt="...">' : '') . '</td>
+							<td class="text-center">' . (($eye_examination->image_uper_lide_re != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_uper_lide_re) . '" alt="...">' : '') . '</td>
 							<td class="text-right">Uper Lide</td>
-							<td class="text-center">' . (($eye_examination->image_uper_lide_le != '') ? '<img src="/images/eye_examinations/' . $eye_examination->image_uper_lide_le . '" alt="...">' : '') . '</td>
+							<td class="text-center">' . (($eye_examination->image_uper_lide_le != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_uper_lide_le) . '" alt="...">' : '') . '</td>
 						</tr>
 						<tr>
 							<td class="text-right">Eye Boll</td>
-							<td class="text-center">' . (($eye_examination->image_eye_boll_re != '') ? '<img src="/images/eye_examinations/' . $eye_examination->image_eye_boll_re . '" alt="...">' : '') . '</td>
+							<td class="text-center">' . (($eye_examination->image_eye_boll_re != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_eye_boll_re) . '" alt="...">' : '') . '</td>
 							<td class="text-right">Eye Boll</td>
-							<td class="text-center">' . (($eye_examination->image_eye_boll_le != '') ? '<img src="/images/eye_examinations/' . $eye_examination->image_eye_boll_le . '" alt="...">' : '') . '</td>
+							<td class="text-center">' . (($eye_examination->image_eye_boll_le != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_eye_boll_le) . '" alt="...">' : '') . '</td>
 						</tr>
 						<tr>
 							<td class="text-right">Locver lide</td>
-							<td class="text-center">' . (($eye_examination->image_locver_lide_re != '') ? '<img src="/images/eye_examinations/' . $eye_examination->image_locver_lide_re . '" alt="...">' : '') . '</td>
+							<td class="text-center">' . (($eye_examination->image_locver_lide_re != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_locver_lide_re) . '" alt="...">' : '') . '</td>
 							<td class="text-right">Locver lide</td>
-							<td class="text-center">' . (($eye_examination->image_locver_lide_le != '') ? '<img src="/images/eye_examinations/' . $eye_examination->image_locver_lide_le . '" alt="...">' : '') . '</td>
+							<td class="text-center">' . (($eye_examination->image_locver_lide_le != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_locver_lide_le) . '" alt="...">' : '') . '</td>
 						</tr>
 					</tbody>
 				</table>
