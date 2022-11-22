@@ -72,8 +72,8 @@ class EyeExaminationRepository
 					<tbody>
 						<tr>
 							<td width="24%">Initial IOP</td>
-							<td width="38%"><b>RE: </b> ' . $eye_examination->plain_eye_vare . '</td>
-							<td width="38%"><b>LE: </b> ' . $eye_examination->plain_eye_vare . '</td>
+							<td width="38%"><b>RE: </b> ' . $eye_examination->initial_iop_re . '</td>
+							<td width="38%"><b>LE: </b> ' . $eye_examination->initial_iop_le . '</td>
 						</tr>
 						<tr>
 							<td rowspan="2">Primary Diagnosis</td>
