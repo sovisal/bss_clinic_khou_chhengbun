@@ -23,6 +23,7 @@ class CreateEyeExaminationsTable extends Migration
 			$table->string('pt_phone')->nullable();
 			$table->string('pt_village')->nullable();
 			$table->string('pt_commune')->nullable();
+			$table->string('pt_address_code')->nullable();
 			$table->string('plain_eye_vare')->nullable();
 			$table->string('plain_eye_vale')->nullable();
 			$table->string('with_ph_vare')->nullable();
