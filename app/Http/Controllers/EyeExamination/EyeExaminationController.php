@@ -22,7 +22,7 @@ class EyeExaminationController extends Controller
 	public function __construct(EyeExaminationRepository $repository)
 	{
 		$this->eye_examination = $repository;
-		$this->path = public_path('images\eye_examinations\\');
+		$this->path = public_path('images/eye_examinations/');
 	}
 
 	public function getDatatable(Request $request)
