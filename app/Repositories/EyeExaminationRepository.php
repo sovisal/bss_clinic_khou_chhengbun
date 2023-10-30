@@ -100,9 +100,9 @@ class EyeExaminationRepository
 							<td class="text-center">' . (($eye_examination->image_uper_lide_le != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_uper_lide_le) . '" alt="...">' : '') . '</td>
 						</tr>
 						<tr>
-							<td class="text-right">Eye Ball</td>
+							<td class="text-right">Eyeball</td>
 							<td class="text-center">' . (($eye_examination->image_eye_boll_re != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_eye_boll_re) . '" alt="...">' : '') . '</td>
-							<td class="text-right">Eye Ball</td>
+							<td class="text-right">Eyeball</td>
 							<td class="text-center">' . (($eye_examination->image_eye_boll_le != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_eye_boll_le) . '" alt="...">' : '') . '</td>
 						</tr>
 						<tr>
