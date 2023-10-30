@@ -94,21 +94,21 @@ class EyeExaminationRepository
 							<td width="30%" class="text-center">LE</td>
 						</tr>
 						<tr>
-							<td class="text-right">Uper Lide</td>
+							<td class="text-right">Upper Eyelid</td>
 							<td class="text-center">' . (($eye_examination->image_uper_lide_re != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_uper_lide_re) . '" alt="...">' : '') . '</td>
-							<td class="text-right">Uper Lide</td>
+							<td class="text-right">Upper Eyelid</td>
 							<td class="text-center">' . (($eye_examination->image_uper_lide_le != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_uper_lide_le) . '" alt="...">' : '') . '</td>
 						</tr>
 						<tr>
-							<td class="text-right">Eye Boll</td>
+							<td class="text-right">Eye Ball</td>
 							<td class="text-center">' . (($eye_examination->image_eye_boll_re != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_eye_boll_re) . '" alt="...">' : '') . '</td>
-							<td class="text-right">Eye Boll</td>
+							<td class="text-right">Eye Ball</td>
 							<td class="text-center">' . (($eye_examination->image_eye_boll_le != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_eye_boll_le) . '" alt="...">' : '') . '</td>
 						</tr>
 						<tr>
-							<td class="text-right">Locver lide</td>
+							<td class="text-right">Lower Eyelid</td>
 							<td class="text-center">' . (($eye_examination->image_locver_lide_re != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_locver_lide_re) . '" alt="...">' : '') . '</td>
-							<td class="text-right">Locver lide</td>
+							<td class="text-right">Lower Eyelid</td>
 							<td class="text-center">' . (($eye_examination->image_locver_lide_le != '') ? '<img src="' . asset('images/eye_examinations/' . $eye_examination->image_locver_lide_le) . '" alt="...">' : '') . '</td>
 						</tr>
 					</tbody>
@@ -122,7 +122,7 @@ class EyeExaminationRepository
 						</tr>
 						<tr>
 							<td>' . $eye_examination->ocular_movem_re . '</td>
-							<td><span>Ocular Movem</span></td>
+							<td><span>Ocular Movement</span></td>
 							<td>' . $eye_examination->ocular_movem_le . '</td>
 						</tr>
 						<tr>
@@ -132,7 +132,7 @@ class EyeExaminationRepository
 						</tr>
 						<tr>
 							<td>' . $eye_examination->conjunctiva_re . '</td>
-							<td><span>Conjunctiva</span></td>
+							<td><span>Conjuntivite</span></td>
 							<td>' . $eye_examination->conjunctiva_le . '</td>
 						</tr>
 						<tr>
